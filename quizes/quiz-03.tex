@@ -1,0 +1,100 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{relsize}
+\usepackage{setspace}
+%\usepackage{tikz}
+%\usetikzlibrary{trees}
+\usepackage[shortlabels]{enumitem}
+\usepackage[normalem]{ulem}
+\newcommand{\stkout}[1]{\ifmmode\text{\sout{\ensuremath{#1}}}\else\sout{#1}\fi}
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{\ensuremath{#2}}}
+% \usepackage{showframe}
+\graphicspath{ {./} }
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+\doublespacing
+
+% -------------------
+% Font
+% -------------------
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+
+
+% -------------------
+% Commands
+% -------------------
+\newcommand{\quiz}[2]{\noindent\textbf{Name: }\makebox[8cm]{\hrulefill} \hfill \textbf{Date: }\makebox[3cm]{\hrulefill} \hfill  \\  \textbf{MATH 208} \hfill \textbf{Quiz 3}\\}
+
+\newcommand{\prob}{\noindent\textbf{Problem. }}
+\newcounter{problem}
+\newcommand{\problem}{
+	\stepcounter{problem}%
+	\noindent \textbf{\theproblem) }%
+}
+\newcommand{\pspace}{\par\vspace{\baselineskip}}
+\newcommand{\ds}{\displaystyle}
+
+
+% -------------------
+% Header & Footer
+% -------------------
+\usepackage{fancyhdr}
+
+\fancypagestyle{pages}{
+	%Headers
+	\fancyhead[L]{}
+	\fancyhead[C]{}
+	\fancyhead[R]{}
+\renewcommand{\headrulewidth}{0pt}
+	%Footers
+	\fancyfoot[L]{}
+	\fancyfoot[C]{}
+	\fancyfoot[R]{}
+\renewcommand{\footrulewidth}{0.0pt}
+}
+\headheight=0pt
+\footskip=14pt
+
+\pagestyle{pages}
+
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+\quiz{\#0}{DD/MM}
+
+
+\begin{multicols}{2}
+	[Solve and simplify]
+	\problem $5x^2-3x[4-3(x-2)]$ \\
+	\problem $(2x+y)(3x-4y)$
+\end{multicols}
+\vspace{1.5cm}
+\begin{multicols}{2}
+	[Factor completely]
+	\problem $x^2 +7x+10$ \vspace{2.5cm} \\
+	\problem $x^3 - 2x^2-15x$ \vspace{2.5cm} \\
+	\problem $3x(x-2)^2 -(x-2)6x^2$
+\end{multicols}
+\vspace{1.5cm}
+\begin{multicols}{2}
+	[
+	Simplify and write answers using positive exponents only.
+	]
+	\problem $6(xy^3)^5$ \vspace{2.5cm} \\
+	\problem $\mathlarger{\frac{9u^8v^6}{3u^4v^8}}$ \vspace{2.5cm} \\
+	\problem $(x^{-3}y^2)^{-2}$ \vspace{2.5cm} \\
+	\problem $u^{5/3}u^{2/3}$ \vspace{2.5cm} \\
+	\problem $(9a^4b^{-2})^{1/2}$ \vspace{2.5cm} \\
+	\problem $\mathlarger{\frac{5^0}{3^2} + \frac{3^{-2}}{2^{-2}}}$
+\end{multicols}
+\newpage
+
+
+
+\end{document}

@@ -1,0 +1,94 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{relsize}
+\usepackage{setspace}
+%\usepackage{tikz}
+%\usetikzlibrary{trees}
+\usepackage[shortlabels]{enumitem}
+\usepackage[normalem]{ulem}
+\newcommand{\stkout}[1]{\ifmmode\text{\sout{\ensuremath{#1}}}\else\sout{#1}\fi}
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{\ensuremath{#2}}}
+% \usepackage{showframe}
+\graphicspath{ {./} }
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+\doublespacing
+
+% -------------------
+% Font
+% -------------------
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+
+
+% -------------------
+% Commands
+% -------------------
+\newcommand{\quiz}[2]{\noindent\textbf{Name: }\makebox[8cm]{\hrulefill} \hfill \textbf{Date: }\makebox[3cm]{\hrulefill} \hfill  \\  \textbf{MATH 208} \hfill \textbf{Quiz 2}\\}
+
+\newcommand{\prob}{\noindent\textbf{Problem. }}
+\newcounter{problem}
+\newcommand{\problem}{
+	\stepcounter{problem}%
+	\noindent \textbf{\theproblem) }%
+}
+\newcommand{\pspace}{\par\vspace{\baselineskip}}
+\newcommand{\ds}{\displaystyle}
+
+
+% -------------------
+% Header & Footer
+% -------------------
+\usepackage{fancyhdr}
+
+\fancypagestyle{pages}{
+	%Headers
+	\fancyhead[L]{}
+	\fancyhead[C]{}
+	\fancyhead[R]{}
+\renewcommand{\headrulewidth}{0pt}
+	%Footers
+	\fancyfoot[L]{}
+	\fancyfoot[C]{}
+	\fancyfoot[R]{}
+\renewcommand{\footrulewidth}{0.0pt}
+}
+\headheight=0pt
+\footskip=14pt
+
+\pagestyle{pages}
+
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+\quiz{\#0}{DD/MM}
+
+\begin{multicols}{2}
+	[Write the answer as a simple fraction reduced to lowest terms.]
+	\problem $\mathlarger{\frac{a}{b} + \frac{b}{a}}$ \vspace{1.5cm} \\
+	\problem $\mathlarger{\frac{a}{bc} - \frac{c}{ab}}$ \vspace{1.5cm} \\
+	\problem $\mathlarger{\frac{x^2}{y} \times \frac{y^6}{x^3}}$ \vspace{1.5cm} \\
+	\problem $\mathlarger{\frac{x}{y^3} \div \frac{x^2}{y}}$ \vspace{1.5cm} \\
+	\problem $\mathlarger{\left(\frac{1}{7+h} - \frac{1}{7}\right)} \div h$ \vspace{1.5cm} \\
+	\problem $\mathlarger{\frac{\stkout{x^{-1} + y^{-1}}}{\stkout{x^{-2}-y^{-2}}}}$
+\end{multicols}
+\vspace{1.0cm}
+\begin{multicols}{2}
+	[ Round to the nearest integer]
+	\problem $17/3$ \\
+	\problem $-5/19$ 
+\end{multicols}
+\problem Find the slope of the line that contains the points $(3,-5)$ and $(-4,10)$. \vspace{2.5cm} \\
+\problem Find the $x$ and $y$ coordinates of the point at which the graph of $y=7x-4$ intersects the $x$ axis.  \vspace{2.5cm}\\
+\problem  Find the $x$ and $y$ coordinates of the point at which the graph of $y=7x-4$ intersects the $y$ axis.
+
+\newpage
+
+
+
+\end{document}

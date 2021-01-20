@@ -1,0 +1,96 @@
+\documentclass[17pt]{extarticle}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{trees}
+\usepackage[top=1in, bottom=0.75in, left=0.75in, right=0.75in]{geometry}
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{\ensuremath{#2}}}%
+% \usepackage{showframe}
+
+
+\begin{document}
+
+\section*{Math208 Discussion Outline for 10/20/2020}
+
+\subsection{Homework and other due dates}
+\begin{itemize}
+\item Section 8.3 due 10/20
+\item In class assignment 10/19 (\#6) due 10/25 (Sunday)
+\item We are skipping Section 8.5
+\item \textbf{EXAM 2 on Tuesday, 10/27/2020 during regular class time. Same location as last time.}
+\end{itemize}
+
+\subsection{Extra points available}
+\begin{itemize}
+\item Get 1 extra point in the homework for section 8.3. Solve problem 61 for the general case of i rolls, where i = 1, 2, 3, 4, 5, 6, 7. (Hint:  Think of factorials and combinations. See example 4 on page 413 (section 8.2))
+\item Get 1 extra point for visiting me during office hours or by appointment; before Exam 2.
+\end{itemize}
+
+\subsection{Questions}
+\textbf{How do I do HW \#93 from Section 8.1?}
+
+\setlength{\leftskip}{1cm}
+
+The solution to this problem requires using combinations. This is covered in Section 7.4 of the book, which we did not cover. I created a video to discuss using factorials, permutations, and factorials. Look under the Class Videos section in Math 208 Worked Problems Videos. This is an important method in probability and is helpful for solving the extra credit problem. \textbf{This material will not be on the exam.}
+
+\setlength{\leftskip}{0pt}
+
+
+
+\subsection{Goals}
+\subsubsection*{Section 8.4: Bayes Formula}
+\[P(U_1|B) =
+ \frac{\text{
+ the product of the branch probabilities leading to B through $U_1$}}
+ {\text{
+ the sum of all branch products leading to B}}
+\]
+
+% Set the overall layout of the tree
+\tikzstyle{level 1}=[level distance=3.5cm, sibling distance=3.5cm]
+\tikzstyle{level 2}=[level distance=3.5cm, sibling distance=2cm]
+
+% Define styles for bags and leafs
+\tikzstyle{bag} = [text width=4em, text centered]
+\tikzstyle{end} = [circle, minimum width=3pt,fill, inner sep=0pt]
+
+\begin{tikzpicture}[grow=right, sloped]
+\node[bag] {Start}
+    child {
+        node[bag] {$U_1$}        
+            child {
+                node[end, label=right:
+                    {$B$}] {}
+            }
+            child {
+                node[end, label=right:
+                    {$A$}] {}
+            }
+    }
+    child {
+        node[bag] {$U_2$}        
+        child {
+                node[end, label=right:
+                    {$A$}] {}
+            }
+            child {
+                node[end, label=right:
+                    {$B$}] {}
+            }
+    };
+\end{tikzpicture}
+
+\subsection{In class assignment}
+
+\resizebox{15cm}{!}{
+{What is your preferred music style or favorite band?}
+}
+
+
+\subsubsection*{HW 61: Police Science}
+A new lie-detector test has been devised and must be tested before it is used. One hundred people are selected at random, and each person draws a card from a box of 100 cards. Half the cards instruct the person to lie, and the others instruct the person to tell the truth. Of those who lied, 80\% fail the new lie-detector test (that is, the test indicates lying). Of those who told the truth, 5\% failed the test. What is the probability that a randomly chosen subject will have lied given that the subject failed the test? That the subject will not have lied given that the subject failed the test?
+
+
+
+\end{document}

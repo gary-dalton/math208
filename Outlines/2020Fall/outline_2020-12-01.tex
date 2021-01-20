@@ -1,0 +1,124 @@
+\documentclass[14pt]{extarticle}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\graphicspath{ {../chap10/} }
+\usepackage[top=1in, bottom=0.75in, left=0.75in, right=0.75in]{geometry}
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{\ensuremath{#2}}}%
+\usepackage{hyperref}
+\usepackage[most]{tcolorbox}
+\definecolor{bg}{RGB}{255,249,227}
+
+
+\begin{document}
+
+\section*{Math 208 Discussion Outline for 12/01/2020}
+
+
+\subsection{Homework and other due dates}
+\begin{itemize}
+\item Section 10.2 due 12/01
+\item Section 10.3, 10.4 due 12/04
+\end{itemize}
+
+\subsection{Questions?}
+
+\subsection{Goals}
+Recall and solve derivatives using the
+\begin{itemize}
+	\item Product Rule,
+	\item Quotient Rule,
+	\item Chain Rule.
+	\item Understand what a composite function is.
+\end{itemize}
+
+\subsection{Section 10.3: Product and Quotient Rules}
+\subsubsection*{Product Rule}
+\begin{align*}
+	&\text{Given: } & &F(x) \text{ with derivative } F'(x) \\
+	& & &S(x) \text{ with derivative } S'(x) \\
+	&\text{and } & &f(x) = F(x)S(x) \\
+	&\text{then }\\
+	& & &f'(x) = F'(x)S(x) + F(x)S'(x)
+\end{align*}
+\subsubsection*{Quotient Rule}
+\begin{align*}
+	&\text{Given: } & &P(x) \text{ with derivative } P'(x) \\
+	& & &Q(x) \text{ with derivative } Q'(x) \\
+	&\text{and } & &f(x) = \frac{P(x)}{Q(x)} \\
+	&\text{then }\\
+	& & &f'(x) = \frac{P'(x)Q(x) - P(x)Q'(x)}{(Q(x))^2}
+\end{align*}
+
+\subsubsection*{Examples}
+\begin{align*}
+	&\text{(48)} &y &= (x^3 + 2x^2)(3x-1) \\
+	&			&y' &= (3x^2 + 4x)(3x -1) + (x^3 + 2x^2)(3) \\
+	&			&    &= 9x^3 + 12x^2 - 3x^2 -4x + 3x^3 +6x^2 \\
+	&			&    &= 12x^3 + 15x^2 - 4x\\\\
+	&\text{(54)} &\frac{d}{dw} \frac{w^4 - w^3}{3w-1}&= \frac{(4w^3 - 3w^2)(3w-1) - (w^4 - w^3)(3)}{(3w-1)^2} \\
+	&	&		&= \frac{12w^4- 4w^3 - 9w^3 + 3w^2 - 3w^4 + 3w^3}{(3w-1)^2} \\
+	&	&		&=\frac{9w^4- 10w^3 + 3w^2 }{(3w-1)^2} \\
+	&	&		&=\frac{w^2(9w^2- 10w + 3) }{(3w-1)^2} \\
+\end{align*}
+
+\subsubsection*{Homework}
+9, 11, 13, 15, 17, 19, 31, 33, 55, 57, 63, 77, 87, 91
+
+\subsection{Section 10.4: Chain Rule}
+\subsubsection*{Composite function}
+Given 2 functions, $f(u)$ and $g(v)$, there is a composite function, $g(f(x))$. We say "g of f of x".
+\begin{align*}
+	&\text{Let:} & &g(x) = x^3 \text{ and } f(u) = e^u \\
+	&\text{then } & &g(f(x)) = g(e^x) = (e^x)^3 = e^{3x}
+\\\\
+	&\text{Let:} & &g(v) = 3\ln(v) \text{ and } f(x) = e^x \\
+	&\text{then } & &g(f(x)) = g(e^x) = 3\ln(e^x) = 3x
+\\\\
+	&\text{Let:} & &h(v) = \sqrt{v} \text{ and } p(x) = x^2 + 4x + 6 \\
+	&\text{then } & &h(p(x)) = h(x^2 + 4x + 6) = \sqrt{x^2 + 4x + 6}
+\end{align*}
+
+\subsubsection*{Chain Rule}
+\begin{align*}
+	&\text{Given: } & &f(x)= H(G(x)) \text{ is a composite function } \\
+	&\text{then }\\
+	& & &f'(x) = H'(G(x)) * G'(x)
+\end{align*}
+The chain may go on for multiple levels if needed.
+
+\subsubsection*{Examples}
+\begin{align*}
+	&\text{(18)} &f(x) &= (9-5x)^2 \\
+	&			&f'(x) &= 2(9-5x)^{2-1}*(-5) \\
+	&			&    &=-10(9-5x) = 50x - 90  \\\\
+	&\text{(32)} &f(x) &= 2 \ln(x^2 - 3x + 4) \\
+	&			&f'(x)	&= \frac{2}{x^2-3x+4}*(2x-3) \\
+	&	&		&= \frac{4x-6}{x^2-3x+4}
+\end{align*}
+\begin{align*}
+	&\text{(50)} &f(x) &= x \ln(1+e^x)\\
+	&			&f'(x) &= (1)\ln(1+e^x) + x\frac{1}{1+e^x}e^x\\
+	&			&    &=\ln(1+e^x) + \frac{xe^x}{1+e^x}
+\end{align*}
+Find the value where the tangent line is horizontal
+\begin{align*}
+	&\text{(68)} &f(x) &= (x^2 +4x+5)^{1/2} \\
+	&			&f'(x)	&= \frac{1}{2}(x^2 +4x+5)^{-1/2}*(2x +4) \\
+	&	&		&= \frac{2x +4}{2 \sqrt{x^2 +4x+5}} \\
+	&	&		f'(x)&=0 \text{ when } x=-2
+\end{align*}
+
+\subsubsection*{Homework}
+17-37 odd, 41-51 odd, 57, 63
+
+
+
+\cleardoublepage
+
+
+
+
+
+
+\end{document}

@@ -1,0 +1,372 @@
+\documentclass[14pt]{extarticle}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\graphicspath{ {../chap04/} }
+\usepackage[top=0.75in, bottom=0.75in, left=0.75in, right=0.75in]{geometry}
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{\ensuremath{#2}}}%
+\usepackage[shortlabels]{enumitem}
+% \usepackage{showframe}
+\title{\vspace{-5ex}Math 208 Section 4.4}
+\date{\vspace{-10ex}}
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+\usepackage{xcolor}
+\newcommand{\yhighlight}[1]{%
+	\colorbox{yellow!50}{$\displaystyle#1$}}
+\newcommand{\bhighlight}[1]{%
+	\colorbox{blue!20}{$\displaystyle#1$}}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\newcommand{\tikzmark}[1]{\tikz[overlay,remember picture] \node (#1) {};}
+\newcommand{\DrawBox}[4][]{%
+	\tikz[overlay,remember picture]{%
+		\coordinate (TopLeft)     at ($(#2)+(-0.2em,0.9em)$);
+		\coordinate (BottomRight) at ($(#3)+(0.2em,-0.3em)$);
+		%
+		\path (TopLeft); \pgfgetlastxy{\XCoord}{\IgnoreCoord};
+		\path (BottomRight); \pgfgetlastxy{\IgnoreCoord}{\YCoord};
+		\coordinate (LabelPoint) at ($(\XCoord,\YCoord)!0.5!(BottomRight)$);
+		%
+		\draw [red,#1] (TopLeft) rectangle (BottomRight);
+		\node [below, #1, fill=none, fill opacity=1] at (LabelPoint) {#4};
+	}
+}
+
+\begin{document}
+\maketitle		
+\section*{Homework, Reading, and Other}
+\begin{itemize}
+	\item Section 4.3
+	\item Section 4.4
+	\item Section 4.5
+	\item Quiz 2
+\end{itemize}
+
+\section*{Goals}
+\begin{itemize}
+	\item Add and subtract matrices
+	\item Multiply a matrix by a scalar
+	\item Calculate the matrix product of a row vector and column vector
+	\item Determine if the matrix product of $A_{n\times m} \times B_{p\times r}$ exists and its dimension.
+	\item Calculate the matrix product and understand that $A\times B$ is not equivalent to $B\times A$.
+\end{itemize}
+
+\section*{4.4 Matrices: Basic Operations}
+For all discussions in this section, let $A$ be an $n\times m$ matrix and let $B$ be a $p\times q$ matrix, where $n, p$ are the number of rows and $m, q$ are the number of columns. For any examples below, let:
+\begin{align*}
+	&A = \begin{bmatrix}
+		1 \\
+		2 \\
+		3
+	\end{bmatrix} &
+	&B = \begin{bmatrix}
+		4 \\
+		0 \\
+		6
+	\end{bmatrix} &
+	&C =\begin{bmatrix}
+		4 & 5 & 6
+	\end{bmatrix} \\
+	&D = \begin{bmatrix}
+		1 & 2 & 3 \\
+		4 & 0 & 6
+	\end{bmatrix} &
+	&E = \begin{bmatrix}
+		2 & 1 \\
+		1 & 2 \\
+		3 & 4
+	\end{bmatrix} &
+	&F = \begin{bmatrix}
+		3 & 3 \\
+		4 & 1 \\
+		2 & 0
+	\end{bmatrix}
+\end{align*}
+
+\subsection{Addition and Subtraction}
+Matrices must be of the same dimension to perform addition or subtraction. In other words A and B must have the same number of rows and columns. If they are not the same dimension, then the operation is \textit{not defined}. If the operation is defined, then addition and subtraction are performed elementwise and the result matrix is the same dimension as A and B.
+\begin{align*}
+	\begin{bmatrix}
+		a_{1 1} & a_{1 2} & a_{1 3} \\
+		a_{2 1} & a_{2 2} & a_{2 3}
+	\end{bmatrix} + 
+	\begin{bmatrix}
+		b_{1 1} & b_{1 2} & b_{1 3} \\
+		b_{2 1} & b_{2 2} & b_{2 3}
+	\end{bmatrix} = 
+	\begin{bmatrix}
+		a_{1 1}+b_{1 1} & a_{1 2}+b_{1 2} & a_{1 3}+b_{1 3} \\
+		a_{2 1}+b_{2 1} & a_{2 2}+b_{2 2} & a_{2 3}+b_{2 3}
+	\end{bmatrix}
+\end{align*}
+\subsubsection*{Commutative and Associative}
+Let $A,B,C$ be matrices of the same dimensions then
+\begin{itemize}
+	\item $A+B = B+A$
+	\item $(A+B)+C= A+(B+C)$
+\end{itemize}
+\subsubsection*{Examples}
+\begin{itemize}
+	\item $A-B$
+\begin{align*}
+	\begin{bmatrix}
+		1 \\
+		2 \\
+		3
+	\end{bmatrix} -
+	\begin{bmatrix}
+		4 \\
+		0 \\
+		6
+	\end{bmatrix}
+	= \begin{bmatrix}
+		1 -4\\
+		2 -0\\
+		3 -6
+	\end{bmatrix}
+	= \begin{bmatrix}
+		-3 \\
+		2 \\
+		-3
+	\end{bmatrix}
+\end{align*}
+\item $A+C$ is not defined.
+\item $D+E$ is not defined.
+\item $E+F$
+\begin{align*}
+	\begin{bmatrix}
+		2 & 1 \\
+		1 & 2 \\
+		3 & 4
+	\end{bmatrix} +
+	 \begin{bmatrix}
+		3 & 3 \\
+		4 & 1 \\
+		2 & 0
+	\end{bmatrix} =
+	\begin{bmatrix}
+		2+3 & 1+3 \\
+		1+4 & 2+1 \\
+		3+2 & 4+0
+	\end{bmatrix} =
+	\begin{bmatrix}
+		5 & 4 \\
+		5 & 3 \\
+		5 & 4
+	\end{bmatrix}
+\end{align*}
+\end{itemize}
+
+
+\subsection{Scalar Multiplication}
+Any matrix may be multiplied by a scalar (a constant number).
+\subsubsection*{Examples}
+\begin{itemize}
+	\item $4*A$
+	\begin{align*}
+		4 * \begin{bmatrix}
+			1 \\
+			2 \\
+			3
+		\end{bmatrix} = 
+		\begin{bmatrix}
+			4 \\
+			8 \\
+			12
+		\end{bmatrix}
+	\end{align*}
+	\item $1/2*C$
+	\begin{align*}
+		-1/2 * \begin{bmatrix}
+			4 & 5 & 6
+		\end{bmatrix} = 
+		\begin{bmatrix}
+			-2 & -5/2 & -3
+		\end{bmatrix}
+	\end{align*}
+\end{itemize}
+
+\subsection{Matrix Product of a Row Vector and Column Vector}
+Given a $1\times n$ row vector, $A=\begin{bmatrix}a_1 & a_2 & \cdots & a_n\end{bmatrix}$ and a $n\times 1$ column vector, $B=\begin{bmatrix}b_1 \\ b_2 \\ \vdots \\ b_n\end{bmatrix}$. The matrix product is defined as $a_1b_1 + a_2b_2 + \cdots + a_nb_n$. This operation is not commutative.
+\subsubsection*{Example}
+\begin{itemize}
+	\item $C * B$
+\begin{align*}
+	\begin{bmatrix}
+		4 & 5 & 6
+	\end{bmatrix} *
+	\begin{bmatrix}
+		4 \\
+		0 \\
+		6
+	\end{bmatrix} =
+	4*4 + 5*0 + 6*6 = 16+ 36 = 52
+\end{align*}
+\end{itemize}
+
+\subsection{Matrix Product Existence and Dimension}
+Recall that the dimensions of a matrix are given as $n\times m$, where n is the number of rows and m is the number of columns. In order for the matrix product to be defined, we must have that the \colorbox{yellow!50}{number of columns of the first} matrix is equal to the \colorbox{yellow!50}{number of rows of the second} matrix. When this is true, the product matrix has dimensions of the \colorbox{blue!20}{number of rows of the first} matrix by the \colorbox{blue!20}{number of columns of the second} matrix.
+\subsubsection*{Examples}
+For these examples, just use the dimensions of the given matrices in order.
+\begin{itemize}
+	\item $A * B$, $\bhighlight{3}\times \yhighlight{1}$ and $\yhighlight{3} \times \bhighlight{1}$. Notice that the inner terms, $1\neq 3$, therefore; this operation is not defined.
+	\item $A * C$, $\bhighlight{3} \times \yhighlight{1}$ and  $\yhighlight{1}\times \bhighlight{3}$. Since the inner terms, $1 = 1$, the product exists and its dimension is $3\times 3$.
+	\item $A * D$, $\bhighlight{3}\times \yhighlight{1}$ and $\yhighlight{2} \times \bhighlight{3}$. Notice that the inner terms, $1\neq 3$, therefore; this operation is not defined.
+	\item $D * A$, $\bhighlight{2} \times \yhighlight{3}$ and  $\yhighlight{3}\times \bhighlight{1}$. Since the inner terms, $3 = 3$, the product exists and its dimension is $2\times 1$.
+\end{itemize}
+
+\subsection{Calculate the Product of Matrices}
+Recall how we found the product of a row vector and a column vector. It is easier to understand how to find the product by example but please do read the definition of \textit{Matrix Product} on page 215. Let's find the product of $D*F$.
+\\\\
+D is $\bhighlight{2} \times \yhighlight{3}$ and  F is $\yhighlight{3}\times \bhighlight{2}$. Since the inner terms, $3 = 3$, the product exists and its dimension is $2\times 2$. (\textbf{always do this check first})
+\begin{align*}
+	\begin{bmatrix}
+		\tikzmark{left1}1 & 2 & 3\tikzmark{right1} \\
+		4 & 0 & 6
+	\end{bmatrix} &\times
+	\begin{bmatrix}
+		\tikzmark{left2}3 & 3 \\
+		4 & 1 \\
+		2\tikzmark{right2} & 0
+	\end{bmatrix} = 
+	\begin{bmatrix}
+		p_{1 1} & p_{1 2} \\
+		p_{2 1} & p_{2 2}
+	\end{bmatrix}
+	\\
+	p_{1 1} = \begin{bmatrix}1 & 2 & 3\end{bmatrix} &\times
+	\begin{bmatrix}3 \\ 4 \\ 2\end{bmatrix} = 1*3 + 2*4 + 3*2 =	17
+\end{align*}
+\DrawBox[thick, red ]{left1}{right1}{}
+\DrawBox[thick, blue ]{left2}{right2}{}\\
+\begin{align*}
+	\begin{bmatrix}
+		\tikzmark{left1}1 & 2 & 3\tikzmark{right1} \\
+		4 & 0 & 6
+	\end{bmatrix} &\times
+	\begin{bmatrix}
+		3 & \tikzmark{left2}3 \\
+		4 & 1 \\
+		2 & 0\tikzmark{right2}
+	\end{bmatrix}
+	\\
+	p_{1 2} = \begin{bmatrix}1 & 2 & 3\end{bmatrix} &\times
+	\begin{bmatrix}3 \\ 1 \\ 0\end{bmatrix} = 3+2+0=5
+\end{align*}
+\DrawBox[thick, red ]{left1}{right1}{}
+\DrawBox[thick, blue ]{left2}{right2}{}
+
+\cleardoublepage
+
+\begin{align*}
+	\begin{bmatrix}
+		1 & 2 & 3 \\
+		\tikzmark{left1}4 & 0 & 6\tikzmark{right1}
+	\end{bmatrix} &\times
+	\begin{bmatrix}
+		\tikzmark{left2}3 & 3 \\
+		4 & 1 \\
+		2\tikzmark{right2} & 0
+	\end{bmatrix}
+	\\
+	p_{2 1} = \begin{bmatrix}4 & 0 & 6\end{bmatrix} &\times
+	\begin{bmatrix}3 \\ 4 \\ 2\end{bmatrix} =12+0+12=24
+\end{align*}
+\DrawBox[thick, red ]{left1}{right1}{}
+\DrawBox[thick, blue ]{left2}{right2}{}
+
+\begin{align*}
+	\begin{bmatrix}
+		1 & 2 & 3 \\
+		\tikzmark{left1}4 & 0 & 6\tikzmark{right1}
+	\end{bmatrix} &\times
+	\begin{bmatrix}
+		3 & \tikzmark{left2}3 \\
+		4 & 1 \\
+		2 & 0\tikzmark{right2}
+	\end{bmatrix}
+	\\
+	p_{2 2} = \begin{bmatrix}4 & 0 & 6\end{bmatrix} &\times
+	\begin{bmatrix}3 \\ 1 \\ 0\end{bmatrix} = 12+0+0=12
+\end{align*}
+\DrawBox[thick, red ]{left1}{right1}{}
+\DrawBox[thick, blue ]{left2}{right2}{}
+So that
+\begin{align*}
+	D*F = \begin{bmatrix}
+		p_{1 1} & p_{1 2} \\
+		p_{2 1} & p_{2 2}
+	\end{bmatrix} =
+	\begin{bmatrix}
+		17 & 5 \\
+		24 & 12
+	\end{bmatrix}
+\end{align*}
+
+\subsubsection*{Examples}
+\begin{itemize}
+	\item $D*E$ is $\bhighlight{2} \times \yhighlight{3}$ and $\yhighlight{3}\times \bhighlight{2}$. Since the inner terms, $3 = 3$, the product exists and its dimension is $2\times 2$.
+\begin{align*}
+	\begin{bmatrix}
+		1 & 2 & 3 \\
+		4 & 0 & 6
+	\end{bmatrix} \times
+	\begin{bmatrix}
+		2 & 1 \\
+		1 & 2 \\
+		3 & 4
+	\end{bmatrix} &= 
+	\begin{bmatrix}
+		1*2+2*1+3*3 & 1*1+2*2+3*4 \\
+		4*2+0+6*3 & 4*1+0+6*4
+	\end{bmatrix} \\
+	& = \begin{bmatrix}
+		13 & 17 \\
+		24 & 28
+	\end{bmatrix}
+\end{align*}
+\item $E*D$ is $\bhighlight{3} \times \yhighlight{2}$ and $\yhighlight{2}\times \bhighlight{3}$. Since the inner terms, $2 = 2$, the product exists and its dimension is $3\times 3$.
+\begin{align*}
+	\begin{bmatrix}
+		2 & 1 \\
+		1 & 2 \\
+		3 & 4
+	\end{bmatrix} \times
+	\begin{bmatrix}
+		1 & 2 & 3 \\
+		4 & 0 & 6
+	\end{bmatrix} 
+	 &= 
+	\begin{bmatrix}
+		2*1+1*4 & 2*2+0 & 2*3+1*6 \\
+		1*1+2*4 & 1*2+0 & 1*3+2*6 \\
+		3*1+4*4 & 3*2+0 & 3*3+4*6
+	\end{bmatrix} \\
+	& = \begin{bmatrix}
+		6 & 4 & 12 \\
+		9 & 2 & 15 \\
+		19 & 6 & 33
+	\end{bmatrix}
+	\end{align*}
+\end{itemize}
+
+\subsubsection*{Not Commutative,  But Associative, and Distributive}
+Assuming the operation is defined:
+\begin{itemize}
+	\item Matrix products are \textbf{not commutative}, $D\times E$ may not equal $E\times D$. This is so even if the matrices are square.
+	\item Matrix products are associative, $(F\times D) \times E = F\times (D\times E)$.
+	\item Matrices are distributive, $D(E+F) = DE + DF$.
+\end{itemize}
+
+\subsection{Summary}
+\begin{itemize}
+	\item Always verify first that the matrix operation is defined by checking the dimensions of the input matrices.
+	\item Determine the dimensions of the result matrix.
+	\item Take your time performing matrix products. Row to column.
+	\item Try to do all of the homework problems 33-48 on page 221.	
+	\item $A^2=A\times A$. This is only defined if $A$ is a square matrix ($n=m$).
+\end{itemize}
+
+
+\end{document}

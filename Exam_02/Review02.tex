@@ -1,0 +1,230 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{trees}
+\usepackage[top=1in, bottom=0.75in, left=0.75in, right=0.75in]{geometry}
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{\ensuremath{#2}}}%
+% \usepackage{showframe}
+
+
+\begin{document}
+\title{Math 208: Review for Chapters 5 and 8}
+\author{by Gary Dalton}
+\date{Exam date is October 27, 2020}
+\maketitle
+
+\section*{Exam 2 Information}
+
+Exam 2 is on Tuesday, October 27, 2020.
+
+\begin{table}[h]
+\begin{tabular}{lll}
+\hline
+\textbf{Section} & \textbf{Time} & \textbf{Location}   \\ \hline
+Sec 608          & 11:00am-11:50am  & Wisconsin Room East \\ \hline
+Sec 610          & Noon-12:50pm   	& Wisconsin Room West  \\ \hline
+Sec 612          & 1:00-1:50pm   	& Wisconsin Room East \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection*{Can I take the exam at another time/date?}
+If you are unable to attend the exam for a valid reason, you \textbf{MUST} communicate with me prior to the scheduled time. My email and office hours are posted on canvas.
+\\\\
+You will then be required to complete a take-home exam which students have stated is more difficult. The take-home exam will also not have this handy-dandy study guide to cover all of its questions.
+
+\subsection*{I have a question about how to do a problem on this study guide}
+My email and office hours are posted on canvas. I will also meet with you by appointment. Many of the problems in this study guide have already been solved, either in the homework or during the discussion sections. Both the homework solutions and the discussion notes are posted on Canvas.
+
+\subsection*{Preparing and taking the exam}
+\begin{itemize}
+\item Arrive early
+\item Bring your non-graphing calculator and know how to use it
+\item Bring extra pencils and an eraser
+\item Answer every question (at least minimally)
+\item If you get stuck on a question, move on to the next question and come back to it later
+\item Double check answers if time allows
+
+\end{itemize}
+
+\section*{Chapter 5}
+
+\subsection*{Graphing Inequalities}
+There will be 4 questions from this section on the exam. Here are some sample problems.
+\begin{itemize}
+\item p263 Problems 9, 11, 13, 15, 17
+\item p270 Problems 29, 31, 33, 35, 37
+\item p281 Problems 21, 23, 25
+\end{itemize}
+
+\section*{Chapter 8}
+
+\begin{itemize}
+\item \textbf{Basics}
+$$\text{Sum of the probability of all possible events (the sample space)}  = 1$$
+$$0\leq P(\text{ of any event }) \leq 1$$
+\item \textbf{Probability}
+$$P(E) = \frac{\text{number of elements in the event}}{\text{number of elements in the sample space}}$$
+\item \textbf{Union Probability}
+$$P(A \cup B) = P(A) + P(B) - P(A \cap B)$$
+$$\text{Disjoint events }P(A \cup B) = P(A) + P(B)$$
+\item \textbf{Conditional Probability}
+$$P(A \vert B)=\frac{P(A \cap B)}{P(B)}\text{, }P(B \vert A)=\frac{P(A \cap B)}{P(A)}$$
+\item \textbf{Bayes Formula}
+\[P(U_1|B) =
+ \frac{\text{
+ the product of the branch probabilities leading to B through $U_1$}}
+ {\text{
+ the sum of all branch products leading to B}}
+\]
+\end{itemize}
+
+There will be 16 questions from this section on the exam. Here are some sample problems.
+\begin{itemize}
+\item \textbf{Section 8.1}: p 406 Problems 31, 33, 41, 43, 45, 47, 49, 51, 53, 55
+\item \textbf{Section 8.2}: p 418 Problems 7, 8, 9, 10, 11, 12, 49, 51, 53, 55
+\item  \textbf{Section 8.3}: p 432 Problems 7, 9, 11, 13, 15, 17, 19, 21, 59, 61, 67
+\item \textbf{Section 8.3 A}: Yoshi brings home pizza tonight with probability of 0.5 and Peach brings home ramen tonight with probability of 0.4. Yoshi and Peach have a probability of 0.2 of both bringing home food tonight. What is the probability that Mario who lives with Yoshi and Peach will eat at least pizza or ramen tonight?
+\item \textbf{Section 8.3 B}: Muad'dib needs new a notebook and pen but only has time to go to either store A or store B. If he goes to store A, they carry 7 different notebooks and 12 different pens. If, instead, he goes to store B, he may choose from 4 notebook styles and 8 pen types. How many combinations must Muad'dib choose from?
+\item  \textbf{Section 8.4}: Complete a tree diagram below and solve for the following problems on page 442 problems 53, 55, 59, 61.
+
+
+
+\end{itemize}
+
+% Set the overall layout of the tree
+\tikzstyle{level 1}=[level distance=3.5cm, sibling distance=3.5cm]
+\tikzstyle{level 2}=[level distance=3.5cm, sibling distance=2cm]
+
+% Define styles for bags and leafs
+\tikzstyle{bag} = [text width=4em, text centered]
+\tikzstyle{end} = [circle, minimum width=3pt,fill, inner sep=0pt]
+
+\subsubsection*{Problem 53}
+\begin{tikzpicture}[grow=right, sloped]
+\node[bag] {Start}
+    child {
+        node[bag] {}        
+            child {
+                node[end, label=right:
+                    {}] {}
+            }
+            child {
+                node[end, label=right:
+                    {}] {}
+            }
+    }
+    child {
+        node[bag] {}        
+        child {
+                node[end, label=right:
+                    {}] {}
+            }
+            child {
+                node[end, label=right:
+                    {}] {}
+            }
+    };
+\end{tikzpicture}
+
+\subsubsection*{Problem 55}
+\begin{tikzpicture}[grow=right, sloped]
+\node[bag] {Start}
+    child {
+        node[bag] {}        
+            child {
+                node[end, label=right:
+                    {}] {}
+            }
+            child {
+                node[end, label=right:
+                    {}] {}
+            }
+    }
+    child {
+        node[bag] {}        
+            child {
+                node[end, label=right:
+                    {}] {}
+            }
+            child {
+                node[end, label=right:
+                    {}] {}
+            }
+    }
+    child {
+        node[bag] {}        
+        child {
+                node[end, label=right:
+                    {}] {}
+            }
+            child {
+                node[end, label=right:
+                    {}] {}
+            }
+    };
+\end{tikzpicture}
+
+\subsubsection*{Problem 59}
+\begin{tikzpicture}[grow=right, sloped]
+\node[bag] {Start}
+    child {
+        node[bag] {}        
+            child {
+                node[end, label=right:
+                    {}] {}
+            }
+            child {
+                node[end, label=right:
+                    {}] {}
+            }
+    }
+    child {
+        node[bag] {}        
+        child {
+                node[end, label=right:
+                    {}] {}
+            }
+            child {
+                node[end, label=right:
+                    {}] {}
+            }
+    };
+\end{tikzpicture}
+
+\subsubsection*{Problem 61}
+\begin{tikzpicture}[grow=right, sloped]
+\node[bag] {Start}
+    child {
+        node[bag] {}        
+            child {
+                node[end, label=right:
+                    {}] {}
+            }
+            child {
+                node[end, label=right:
+                    {}] {}
+            }
+    }
+    child {
+        node[bag] {}        
+        child {
+                node[end, label=right:
+                    {}] {}
+            }
+            child {
+                node[end, label=right:
+                    {}] {}
+            }
+    };
+\end{tikzpicture}
+
+
+
+
+
+
+
+
+\end{document}

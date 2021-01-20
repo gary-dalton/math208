@@ -1,0 +1,116 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[top=1in, bottom=0.75in, left=0.75in, right=0.75in]{geometry}
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{\ensuremath{#2}}}%
+% \usepackage{showframe}
+
+
+\begin{document}
+\title{Math 208: Review for Chapters 3 and 4}
+\author{by Gary Dalton}
+\date{Exam date is October 1, 2020}
+\maketitle
+
+\section*{Chapter 3}
+
+\subsection*{Formulas Needed}
+\begin{itemize}
+\item $A = P(1+ r/m)^{mt}$
+\item $A = Pe^{rt}$
+\item $APY = (1 + r/m)^m -1$
+\item $APY = e^r -1$
+\end{itemize}
+
+\subsection*{Sample Problems from Chapter 3.2}
+There will be 6 questions from this section on the exam.
+\begin{itemize}
+\item \textbf{Problem 41}: If \$8,000 is invested at 7\% compounded continuously, what is the amount after 6 years?
+\item \textbf{Problem 65}: A newborn child receives a \$20,000 gift toward college from her grandparents. How much will the \$20,000 be worth in 17 years if it is invested at 7\% compounded quarterly?
+\item \textbf{Problem 77}:  An Individual Retirement Account (IRA) has \$20,000 in it, and the owner decides not to add any more money to the account other than interest earned at 6\% compounded daily. How much will be in the account 35 years from now when the owner reaches retirement age?
+\item \textbf{Problem 53}: What is the effective rate (APY) for money invested at an annual rate of
+(A) 5.15\% compounded continuously? and (B) 5.20\% compounded semiannually?
+
+\end{itemize}
+
+\section*{Chapter 4}
+\subsection*{Formulas  and Concepts Needed}
+Given $A = \begin{bmatrix}
+a & b \\
+c & d
+\end{bmatrix}$, $I = \begin{bmatrix}
+1 & 0 \\
+0 & 1
+\end{bmatrix}$, $X = \begin{bmatrix}
+x_1 \\
+x_2
+\end{bmatrix}$, and $B = \begin{bmatrix}
+b_1 \\
+b_2
+\end{bmatrix}
+$
+
+\begin{itemize}
+\item Determinant: $det(A) = a*d - b*c$
+\item $A^{-1} = 1/det(A) * \begin{bmatrix}
+d & -b \\
+-c & a
+\end{bmatrix}
+$
+\item $A^{-1}$ does not exist if $det(A)=0$ and \textbf{A is singular}
+\item Recall the Basic Properties of Matrices from page 236
+\item $A * A^{-1} = I$
+\item $A * I = A = I*A$
+\item $A*X = B$
+\item $X = A^{-1}*B$
+\item Apply Matrix Multiplication and Addition (know when these won't work)
+\item Apply augmented matrix for solution to system of equations and $A^{-1}$
+\item Apply row reduction methods to find solution to system of equations and $A^{-1}$
+\item Recognize and understand \textit{unique solution, infinite solutions}, and \textit{no solution}
+\item Recall and apply \textit{solving by substitution} and \textit{solving by elimination by addition} from Chapter 4.1
+\end{itemize}
+
+
+\subsection*{Sample Problems from Chapter 4}
+There will be 14 questions from this section on the exam.
+\begin{itemize}
+\item \textbf{Solve using addition method}: 
+\begin{align*} 
+3x - 5y &= 4 \\ 
+-9x + 15y &= 12
+\end{align*}
+
+\item \textbf{Find x, y, and z}:
+Given
+$$\begin{bmatrix}
+-x + 5y & z \\
+-3 & 3x + 2y
+\end{bmatrix}
+= 
+\begin{bmatrix}
+2 & -9 \\
+-3 & 11
+\end{bmatrix}
+$$
+
+\item \textbf{Page 221 \#37 and \#43}
+\item \textbf{Page 233 \#17}
+\item \textbf{Page 234 \#37}: Explain why it is singular.
+\item \textbf{Page 234 \#53}: Find the inverse using both the determinant method and using row operations.
+\item \textbf{Page 242 \#17 and \#23}
+
+
+
+
+
+
+\end{itemize}
+
+
+
+
+
+
+
+
+\end{document}

@@ -1,0 +1,339 @@
+\documentclass[14pt]{extarticle}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+%\usetikzlibrary{trees}
+\usepackage{graphicx}
+\graphicspath{ {../chap04/} }
+\usepackage[top=0.75in, bottom=0.75in, left=0.75in, right=0.75in]{geometry}
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{\ensuremath{#2}}}%
+\usepackage[shortlabels]{enumitem}
+% \usepackage{showframe}
+\title{\vspace{-5ex}Math 208 Section 4.3}
+\date{\vspace{-10ex}}
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+\newcommand{\tikzmark}[1]{\tikz[overlay,remember picture] \node (#1) {};}
+\newcommand{\DrawBox}[4][]{%
+	\tikz[overlay,remember picture]{%
+		\coordinate (TopLeft)     at ($(#2)+(-0.2em,0.9em)$);
+		\coordinate (BottomRight) at ($(#3)+(0.2em,-0.3em)$);
+		%
+		\path (TopLeft); \pgfgetlastxy{\XCoord}{\IgnoreCoord};
+		\path (BottomRight); \pgfgetlastxy{\IgnoreCoord}{\YCoord};
+		\coordinate (LabelPoint) at ($(\XCoord,\YCoord)!0.5!(BottomRight)$);
+		%
+		\draw [red,#1] (TopLeft) rectangle (BottomRight);
+		\node [below, #1, fill=none, fill opacity=1] at (LabelPoint) {#4};
+	}
+}
+
+\begin{document}
+\maketitle		
+\section{Homework, Reading, and Other}
+\begin{itemize}
+\item Sections 4.1, 4.2
+\item Section 4.3
+\item Section 4.4
+\end{itemize}
+
+\section{Goals}
+\begin{itemize}
+	\item Easily convert a system of linear equations to an augmented matrix
+	\item Recognize Reduced Form matrices and determine the system's solution
+	\item State and apply the allowable elementary row operations
+	\item Understand and apply Gauss-Jordan Elimination
+\end{itemize}
+
+\section*{4.3 Gauss-Jordan Elimination}
+\textit{Gauss-Jordan Elimination} is an algorithm to get any matrix into a reduced form. This method is applicable to matrices of any size or dimension. It can be used with augmented matrices, as we will in this section, or to find the inverse of a matrix (section 4.5). Typically, we do not solve systems larger than $3 \times 3$ manually.
+\\\\
+You should recall how to convert a system of linear equations to an augmented matrix.
+
+\subsection*{Reduced Form}
+A matrix is in reduced form when:
+\begin{enumerate}[1)]
+	\item Every row containing all zero elements it below every row containing at least one non-zero element.
+	\item The leftmost non-zero element of each row (called a pivot point) is 1.
+	\item All other elements within each pivot point column is 0.
+	\item Pivot points follow a diagonal pattern
+\end{enumerate}
+\cleardoublepage
+Some examples of \textbf{proper reduced form} are:
+\begin{multicols}{3}
+	\begin{align*}
+		&\begin{bmatrix}
+			1 & 0 & | & h\\
+			0 & 1 & | & k
+		\end{bmatrix} 
+	\end{align*}
+	\\
+	\begin{align*}
+		&\begin{bmatrix}
+			1 & 0 & 0 & | & h\\
+			0 & 1 & 0 & | & k \\
+			0 & 0 & 1 & | & j
+		\end{bmatrix} 
+	\end{align*}
+\vfill\null
+\columnbreak
+	\begin{align*}
+		&\begin{bmatrix}
+			1 & m & | & h\\
+			0 & 0 & | & 0
+		\end{bmatrix} 
+	\end{align*}
+	\\
+	\begin{align*}
+		&\begin{bmatrix}
+			1 & 0 & 7 & | & h\\
+			0 & 1 & 2 & | & k \\
+			0 & 0 & 0 & | & 0
+		\end{bmatrix} 
+	\end{align*}
+\vfill\null
+\columnbreak
+	\begin{align*}
+		&\begin{bmatrix}
+			1 & m & | & h\\
+			0 & 0 & | & k
+		\end{bmatrix} 
+	\end{align*}
+	\\
+	\begin{align*}
+		&\begin{bmatrix}
+			1 & 3 & 7 & | & h\\
+			0 & 0 & 0 & | & k \\
+			0 & 0 & 0 & | & 0
+		\end{bmatrix} 
+	\end{align*}
+\vfill\null
+\end{multicols}
+
+Some examples of \textbf{NOT reduced form} are:
+\begin{multicols}{3}
+	\begin{align*}
+		&\begin{bmatrix}
+			1 & 0 & | & h\\
+			0 & 5 & | & k
+		\end{bmatrix} 
+	\end{align*}
+	\\
+	\begin{align*}
+		&\begin{bmatrix}
+			1 & 2 & 4 & | & h\\
+			0 & 1 & 0 & | & k \\
+			0 & 0 & 1 & | & j
+		\end{bmatrix} 
+	\end{align*}
+	\vfill\null
+	\columnbreak
+	\begin{align*}
+		&\begin{bmatrix}
+			1 & m & | & h\\
+			0 & 1 & | & 0
+		\end{bmatrix} 
+	\end{align*}
+	\\
+	\begin{align*}
+		&\begin{bmatrix}
+			1 & 7 & 0 & | & h\\
+			0 & 1 & 2 & | & k \\
+			0 & 0 & 0 & | & 0
+		\end{bmatrix} 
+	\end{align*}
+	\vfill\null
+	\columnbreak
+	\begin{align*}
+		&\begin{bmatrix}
+			-1 & m & | & h\\
+			0 & 0 & | & k
+		\end{bmatrix} 
+	\end{align*}
+	\\
+	\begin{align*}
+		&\begin{bmatrix}
+			0 & 0 & 0 & | & k \\
+			0 & 0 & 0 & | & 0 \\
+			1 & 3 & 7 & | & h
+		\end{bmatrix} 
+	\end{align*}
+	\vfill\null
+\end{multicols}
+
+\subsection*{Row Operations}
+Recall that there are three row operations that are allowed. These operations produce row-equivalent matrices. We can use these row operations to find a row-equivalent reduced form.
+\begin{itemize}
+	\item Interchange any two rows
+	\item Multiply any row by a non-zero constant
+	\item Add a constant multiple of one row to another
+\end{itemize}
+
+\subsection*{Gauss-Jordan Elimination}
+\begin{enumerate}
+	\item Go to the first pivot
+	\item Use row operations to make the pivot equal 1
+	\item Zero the other elements in the pivot column
+	\item Go to the next pivot and loop until no more pivots remain.
+\end{enumerate}
+The algorithm will be demonstrated using \textbf{problem 50} from Section 4.3.
+\begin{align*}
+	2x_1+6x_2 + 15x_3 &= -12 \\
+	4x_1+7x_2 + 13x_3 &= -10 \\
+	3x_1+6x_2 + 12x_3 &= -9
+\end{align*}
+Convert this to an augmented matrix
+\begin{align*}
+	\begin{bmatrix}
+		\tikzmark{left1}2\tikzmark{right1} & 6 & 15 & | & -12 \\
+		4 & 7 & 13 & | & -10 \\
+		3 & 6 & 12 & | & -9
+	\end{bmatrix}
+\end{align*}
+\DrawBox[thick, red ]{left1}{right1}{} \\
+We start working with the first pivot point. Note that every element in row 3 is divisible by 3, divide row 3 by 3. Move row 3 to the pivot.
+\begin{align*}
+	\begin{array}{r}
+		(1/3)R3 \\
+		R2 \\
+		R1
+	\end{array}
+	\begin{bmatrix}
+		\tikzmark{left2}\tikzmark{left1}1\tikzmark{right1} & 2 & 4 & | & -3 \\
+		4 & 7 & 13 & | & -10 \\
+		2 \tikzmark{right2}& 6 & 15 & | & -12
+	\end{bmatrix}
+\end{align*}
+\DrawBox[thick, red ]{left1}{right1}{}
+\DrawBox[thick, blue ]{left2}{right2}{} \\
+We have a 1 in our pivot point but now we must zero the other elements in that column. Replace row 2 with $-4R1 + R2$ and replace row 3 with $-2R1 + R3$.
+\begin{align*}
+	\begin{array}{r}
+		R1 \\
+		-4R1 + R2 \\
+		-2R1 + R3
+	\end{array}
+	\begin{bmatrix}
+		1 & 2 & 4 & | & -3 \\
+		0 & \tikzmark{left1}-1\tikzmark{right1} & -3 & | & 2 \\
+		0 & 2 & 7 & | & -6
+	\end{bmatrix}
+\end{align*}
+\DrawBox[thick, red ]{left1}{right1}{} \\
+Moving to the next pivot. Multiply row 2 by $-1$.
+\begin{align*}
+	\begin{array}{r}
+		R1 \\
+		-R2 \\
+		R3
+	\end{array}
+	\begin{bmatrix}
+		1 & \tikzmark{left2}2 & 4 & | & -3 \\
+		0 & \tikzmark{left1}1\tikzmark{right1} & 3 & | & -2 \\
+		0 & 2 \tikzmark{right2}& 7 & | & -6
+	\end{bmatrix}
+\end{align*}
+\DrawBox[thick, red ]{left1}{right1}{}
+\DrawBox[thick, blue ]{left2}{right2}{} \\
+We have a 1 in our pivot point but now we must zero the other elements in that column. Replace row 1 with $-2R2 + R1$ and replace row 3 with $-2R2 + R3$.
+\begin{align*}
+	\begin{array}{r}
+		-2R2 + R1 \\
+		R2 \\
+		-2R2 + R3
+	\end{array}
+	\begin{bmatrix}
+		1 & 0 & \tikzmark{left2}-2 & | & 1 \\
+		0 & 1 & 3 & | & -2 \\
+		0 & 0 & \tikzmark{left1}1\tikzmark{right1} &\tikzmark{right2} | & -2
+	\end{bmatrix}
+\end{align*}
+\DrawBox[thick, red ]{left1}{right1}{}
+\DrawBox[thick, blue ]{left2}{right2}{}
+\cleardoublepage
+Moving to the next pivot, we note that it is already 1 but now we must zero the other elements in that column. Replace row 1 with $2R3 + R1$ and replace row 2 with $-3R3 + R2$.
+\begin{align*}
+	\begin{array}{r}
+		2R3 + R1 \\
+		-3R3 + R2 \\
+		R3
+	\end{array}
+	\begin{bmatrix}
+		1 & 0 & 0 & | & -3 \\
+		0 & 1 & 0 & | & 4 \\
+		0 & 0 & 1 & | & -2
+	\end{bmatrix}
+\end{align*}
+This is \textbf{reduced form}. The solution may be determined directly from this matrix.
+\begin{align*}
+	x_1= -3 & &	x_2 = 4 & &	x_3 = -2
+\end{align*}
+
+
+\subsection*{Solution Results}
+In the example above, we found a unique solution, but let's consider other results.
+\subsubsection*{Unique solution}
+A consistent and independent solution is of the form.
+\begin{align*}
+	\begin{bmatrix}
+		1 & 0 & 0 & | & -3 \\
+		0 & 1 & 0 & | & 4 \\
+		0 & 0 & 1 & | & -2
+	\end{bmatrix}
+\end{align*}
+Putting this back into our original system of equations, we have
+\begin{align*}
+	x_1+0x_2 + 0x_3 &= -3 \\
+	0x_1+x_2 + 0x_3 &= 4 \\
+	0x_1+0x_2 + x_3 &= -2
+\end{align*}
+or
+\begin{align*}
+	\begin{pmatrix}
+		x_1 = -3	\\
+		x_2 = 4	\\
+		x_3 = -2	
+	\end{pmatrix}
+\end{align*}
+\subsubsection*{No solution}
+An inconsistent solution is of the form:
+\begin{align*}
+	\begin{bmatrix}
+		1 & 0 & 0 & | & -3 \\
+		0 & 1 & 0 & | & 4 \\
+		0 & 0 & 0 & | & -2
+	\end{bmatrix}
+\end{align*}
+For this we simply state \textit{No Solution}.
+\subsubsection*{Infinite solutions}
+A consistent and dependent solution is of the form:
+\begin{align*}
+	\begin{bmatrix}
+		1 & 0 & 1 & | & -3 \\
+		0 & 1 & 2 & | & 4 \\
+		0 & 0 & 0 & | & 0
+	\end{bmatrix}
+\end{align*}
+For this results, we select an arbitrary value for $x_3$ and then solve for $x_1$ and $x_2$. Let $x_3=t$ then $x_2 = 4-2t$ and $x_1=-3-t$.
+\begin{align*}
+	\begin{pmatrix}
+		x_1 = -3-t	\\
+		x_2 = 4 -2t	\\
+		x_3 = t	
+	\end{pmatrix}
+\end{align*}
+It is possible that we might let $x_3 = t$ and $x_2=s$.
+
+\subsection*{Getting Good Results}
+Gauss-Jordan is a very straightforward method to get consistent results but be cautious about keeping track of signs and make certain to add rows properly. Keep track of your actions to make it easier to find errors. Notice how I did it by adding the action performed to each row. It is usually better to keep results in fraction form, meaning avoid using decimals. Finally, be patient and practice.
+\\\\
+Choosing the best first pivot can reduce the number of steps you need to perform. Regardless of your pivot choices, however; you should get the same solution.
+
+\cleardoublepage
+
+
+
+
+\end{document}
