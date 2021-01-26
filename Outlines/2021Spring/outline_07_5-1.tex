@@ -4,13 +4,16 @@
 \usepackage{tikz}
 \usetikzlibrary{calc}
 %\usetikzlibrary{trees}
+\usepackage{hyperref}
 \usepackage{graphicx}
-\graphicspath{ {../../chap04/} }
+\graphicspath{ {../../chap05/} }
 \usepackage[top=0.75in, bottom=0.75in, left=0.75in, right=0.75in]{geometry}
 \newcommand*{\Scale}[2][4]{\scalebox{#1}{\ensuremath{#2}}}%
 \usepackage[shortlabels]{enumitem}
+\usepackage[most]{tcolorbox}
+\definecolor{bg}{RGB}{255,249,227}
 % \usepackage{showframe}
-\title{\vspace{-5ex}Math 208 Section 4.6}
+\title{\vspace{-5ex}Math 208 Section 5.1}
 \date{\vspace{-10ex}}
 \usepackage{multicol}
 \setlength{\columnsep}{1cm}
@@ -33,165 +36,88 @@
 \maketitle		
 \section*{Homework, Reading, and Other}
 \begin{itemize}
-	\item Section 4.5
-	\item Section 4.6
 	\item Exam 1
+	\item Section 5.1
 \end{itemize}
 
 \section*{Goals}
 \begin{itemize}
-	\item Identify, create, and manipulate \textit{matrix equations}.
-	\item Recall and apply the \textit{Basic Properties of Matrices}.
-	\item Solve matrix equations of up to thee variables.
+	\item Understand, manipulate, and graph linear inequalities.
+	\item From a graph, determine the linear inequality.
 \end{itemize}
 
-\section*{4.6 Matrix Equations}
-A \textit{Matrix Equation} extends our use of algebra to more easily solve large systems of equations.
-\\\\
-You already know how to solve $ax=b$ for $x$.
-\begin{align*}
-	a^{-1}ax &= a^{-1}b \\
-	&\text{ which is the same as }\\
-	\frac{1}{a}ax &= \frac{1}{a}b \\
-	\frac{a}{a}x &= a^{-1}b \\
-	x &= a^{-1}b
-\end{align*}
-Recall from augmented matrices:
-\begin{align*}
-	&\begin{array}{cc}
-		x_1 & x_2 \\
-		\downarrow & \downarrow
-	\end{array} \\
-	&\begin{bmatrix}
-		1 & 2 & | & b_1 \\
-		3 & 4 & | & b_2
-	\end{bmatrix} \to
-	\begin{array}{c}
-		1x_1+2x_2 = b_1 \\
-		3x_1 + 4x_2 = b_2
-	\end{array}
-\end{align*}
-In a matrix equation, we have $AX=B$. Notice:
-\begin{align*}
-	&\begin{bmatrix}
-		1 & 2 \\
-		3 & 4
-	\end{bmatrix}
-	&\begin{bmatrix}
-		x_1 \\
-		x_2
-	\end{bmatrix}
-	&=
-	&\begin{bmatrix}
-		1x_1+2x_2 \\
-		3x_1 + 4x_2
-	\end{bmatrix} \\
-	&2\times 2 &2\times 1 & &2\times 1
-\end{align*}
-Now we are able to use the \textit{Basic Properties of Matrices} (page 236) to solve matrix equations.\\
-\includegraphics[width=1.0\linewidth]{4-6-1}
+\section*{5.1 Linear Inequalities in two Variables}
+A \textit{Linear Inequality} is similar to a linear equation but instead of the '=',  we use an inequality operator, i.e: $ <, \leq , >, \geq$. On a number line and with one variable this is easy to understand, such as $ 3<7$ or $x \geq -5$. In this chapter, we work with two variables and show the solutions using a graph.
 
-\subsection{Solving a Matrix Equation}
-\begin{align*}
-	AX&=B \\
-	A^{-1}AX &=A^{-1}B \tag{ Note that this does not equal $BA^{-1}$} \\
-	IX &= A^{-1}B \\
-	X &= A^{-1}B
-\end{align*}
+\subsection{Graphing Linear Inequalities}
+See these \href{https://www.desmos.com/calculator/fyoyd1n4op}{Desmos graphs}
+\\\\
+Start with the equation to the line $y = x-2$. This equation divides the plane into upper/lower or left/right halves. From this equation, we can demonstrate four inequalities. A dashed line indicates the inequality is strictly greater than or strictly less than while a solid line allows equality.
+\\\\
+Sometimes it is obvious which part of the graph to shade but often it is not obvious. There is a simple method that allows for correctly determining the shaded region.
+
+\begin{tcolorbox}[enhanced jigsaw,colback=bg,boxrule=0pt,arc=0pt]
+	\textbf{Procedure to Graph Linear Inequalities}\\
+	for $Ax + By$ $\square$ $C$.
+	\begin{enumerate}
+		\item Find any two points on the line  $Ax + By = C$. The x and y intercepts are good choices.
+		\item Graph Ax + By = C as a dashed line if equality is not included in the original statement, or as a solid line if equality is included.
+		\item Choose a test point anywhere in the plane not on the line and substitute the coordinates into the inequality. The origin, $(0, 0)$, usually requires the least computation.
+		\item If the inequality gives a true statement, shade the half-plane that contains the test point. If not, shade the opposite half-plane.
+	\end{enumerate}
+\end{tcolorbox}
+
 
 \subsection{Examples}
-\subsubsection{$AX+C=B$}
-\begin{align*}
-	AX &= B-C \\
-	A^{-1}AX &= A^{-1}(B-C)\\
-	IX &= A^{-1}(B-C) \\
-	X &= A^{-1}(B-C)
-\end{align*}
+\subsubsection*{Graph $2x – 5y \leq 10$}
+\begin{enumerate}
+	\item $2x – 5y = 10$ \\ then 
+	\begin{tabular}{c|c}
+		x & y \\
+		\hline
+		0 & -2 \\
+		5 & 0 \\
+	\end{tabular}
+	\item Equality is included so solid line
+	\item Use $(0,0)$ as test point. Then 
+	\begin{align*}
+		2*0 -5*0 &\leq 10 \\
+		0 &\leq 10
+	\end{align*}
+	\item Since $0 \leq 10$ is true, shade the half-plane that contains $(0,0)$.
+\end{enumerate}
+\begin{center}\includegraphics[width=0.5\linewidth]{5-1-1}\end{center}
 
-\subsubsection{Solve the system}
+\subsubsection*{Graph $–y < 3/2x -3$}
+First, use some algebra:
 \begin{align*}
-	\begin{array}{cccc}
-		3x_1 - & x_2 + & x_3 & = 1 \\
-		-x_1 + & x_2 & & =3 \\
-		x_1  & + & x_3 & =2
-	\end{array} 
+	–y &< 3/2x -3 \\
+	-3/2x - y &< -3
 \end{align*}
+When multiplying an inequality by a negative number, reverse the inequality.
 \begin{align*}
-	AX&=B \\
-	\begin{bmatrix}
-		3 & -1 & 1 \\
-		-1 & 1 & 0 \\
-		1 & 0 & 1
-	\end{bmatrix}
-	\begin{bmatrix}	x_1 \\	x_2 \\	x_3	\end{bmatrix}
-	&= \begin{bmatrix}	1 \\3 \\2\end{bmatrix}
+	3/2x +y &>3 \\
+	3x + 2y &>6
 \end{align*}
-So, we need to find $A^{-1}$.
-\begin{align*}
-	\begin{bmatrix}
-		-3 & -1 & 1 & | & 1 & 0 & 0 \\
-		-1 & 1 & 0 & | & 0 & 1 & 0 \\
-		1 & 0 & 1 & | & 0 & 0 & 1
-	\end{bmatrix} \to
-	\begin{array}{r}
-		R3 \\
-		R3+R2 \\
-		3R2 + R1
-	\end{array}
-	\begin{bmatrix}
-		1 & 0 & 1 & | & 0 & 0 & 1 \\
-		0 & 1 & 1 & | & 0 & 1 & 1 \\
-		0 & 2 & 1 & | & 1 & 3 & 0
-	\end{bmatrix} \to \\
-	\begin{array}{r}
-		R1 \\
-		R2 \\
-		2R2 + R3
-	\end{array}
-	\begin{bmatrix}
-		1 & 0 & 1 & | & 0 & 0 & 1 \\
-		0 & 1 & 1 & | & 0 & 1 & 1 \\
-		0 & 0 & -1 & | & 1 & 1 & -2
-	\end{bmatrix} \to
-	\begin{array}{r}
-		R3+R1 \\
-		R3+R2 \\
-		-R3
-	\end{array}
-	\begin{bmatrix}
-		1 & 0 & 0 & | & 1 & 1 & -1 \\
-		0 & 1 & 0 & | & 1 & 2 & -1 \\
-		0 & 0 & 1 & | & -1 & -1 & 2
-	\end{bmatrix}
-\end{align*}
-and
-\begin{align*}
-	A^{-1} = \begin{bmatrix}
-		1 & 1 & -1 \\
-		1 & 2 & -1 \\
-		-1 & -1 & 2
-	\end{bmatrix}
-\end{align*}
-Now
-\begin{align*}
-	AX&=B \\
-	X &=A^{-1}B \\
-	&= \begin{bmatrix}
-		1 & 1 & -1 \\
-		1 & 2 & -1 \\
-		-1 & -1 & 2
-	\end{bmatrix}
-	\begin{bmatrix}	1 \\3 \\2\end{bmatrix}
-\end{align*}
-A $3\times 3$ and a $3\times 1$, so the output is a $3 \times 1$.
-\begin{align*}
-	X &= \begin{bmatrix}
-		1+3-2 \\
-		1+6-2 \\
-		-1-3+4
-	\end{bmatrix}
-	= \begin{bmatrix}	x_1=2 \\	x_2=5 \\ x_3=0	\end{bmatrix}
-\end{align*}
+\begin{enumerate}
+	\item $3x + 2y =6$ \\ then 
+	\begin{tabular}{c|c}
+		x & y \\
+		\hline
+		0 & 3 \\
+		2 & 0 \\
+	\end{tabular}
+	\item Equality is not included so dashed line
+	\item Use $(0,0)$ as test point. Then 
+	\begin{align*}
+		3*0 + 2*0 &>6\\
+		0 &> 6
+	\end{align*}
+	\item Since $0 >6$ is false, shade the half-plane that does not contain $(0,0)$.
+\end{enumerate}
+\begin{center}\includegraphics[width=0.5\linewidth]{5-1-2}\end{center}
+
+
 
 \subsubsection{Solve the system}
 \begin{align*}
