@@ -173,10 +173,10 @@ Recall that there are three row operations that are allowed. These operations pr
 
 \subsection*{Gauss-Jordan Elimination}
 \begin{enumerate}
-	\item Go to the first pivot
+	\item Go to the first pivot location
 	\item Use row operations to make the pivot equal 1
 	\item Zero the other elements in the pivot column
-	\item Go to the next pivot and loop until no more pivots remain.
+	\item Go to the next pivot location and loop until no more pivots remain.
 \end{enumerate}
 The algorithm will be demonstrated using \textbf{problem 50} from Section 4.3.
 \begin{align*}
@@ -316,7 +316,7 @@ A consistent and dependent solution is of the form:
 		0 & 0 & 0 & | & 0
 	\end{bmatrix}
 \end{align*}
-For this results, we select an arbitrary value for $x_3$ and then solve for $x_1$ and $x_2$. Let $x_3=t$ then $x_2 = 4-2t$ and $x_1=-3-t$.
+For this result, we select an arbitrary value for $x_3$ and then solve for $x_1$ and $x_2$. Let $x_3=t$ then $x_2 = 4-2t$ and $x_1=-3-t$.
 \begin{align*}
 	\begin{pmatrix}
 		x_1 = -3-t	\\
@@ -329,7 +329,7 @@ It is possible that we might let $x_3 = t$ and $x_2=s$.
 \subsection*{Getting Good Results}
 Gauss-Jordan is a very straightforward method to get consistent results but be cautious about keeping track of signs and make certain to add rows properly. Keep track of your actions to make it easier to find errors. Notice how I did it by adding the action performed to each row. It is usually better to keep results in fraction form, meaning avoid using decimals. Finally, be patient and practice.
 \\\\
-Choosing the best first pivot can reduce the number of steps you need to perform. Regardless of your pivot choices, however; you should get the same solution.
+Choosing the best first pivot can reduce the number of steps you need to perform. Regardless of your pivot choices, you should get the same solution.
 
 \noindent\rule{\textwidth}{1pt}
 {\footnotesize Copyright (C) 2021 Garold Dalton --- Released under GNU General Public License v3.0}

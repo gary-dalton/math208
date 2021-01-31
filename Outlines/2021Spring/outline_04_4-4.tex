@@ -53,7 +53,7 @@
 \end{itemize}
 
 \section*{4.4 Matrices: Basic Operations}
-For all discussions in this section, let $A$ be an $n\times m$ matrix and let $B$ be a $p\times q$ matrix, where $n, p$ are the number of rows and $m, q$ are the number of columns. For any examples below, let:
+For all discussions in this section, let $A$ be an $n\times m$ matrix and let $B$ be a $p\times q$ matrix, where $n, p$ are the number of rows and $m, q$ are the number of columns. For the examples below, let:
 \begin{align*}
 	&A = \begin{bmatrix}
 		1 \\
@@ -84,6 +84,28 @@ For all discussions in this section, let $A$ be an $n\times m$ matrix and let $B
 	\end{bmatrix}
 \end{align*}
 
+\subsection{Equality}
+Two matrices are equal to each other if they have the same size (same number of rows and same number of columns) and corresponding elements are equal.
+
+\begin{align*}
+	\begin{bmatrix}
+		a & b & c \\
+		d & e & f
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+		u & v & w \\
+		x & y & z
+	\end{bmatrix}
+\end{align*}
+if and only if
+\begin{align*}
+	\begin{array}{ccc}
+		a=u & b=v & c=w \\
+		d=x & e=y & f=z
+	\end{array}
+\end{align*}
+
 \subsection{Addition and Subtraction}
 Matrices must be of the same dimension to perform addition or subtraction. In other words A and B must have the same number of rows and columns. If they are not the same dimension, then the operation is \textit{not defined}. If the operation is defined, then addition and subtraction are performed elementwise and the result matrix is the same dimension as A and B.
 \begin{align*}
@@ -101,12 +123,12 @@ Matrices must be of the same dimension to perform addition or subtraction. In ot
 	\end{bmatrix}
 \end{align*}
 \subsubsection*{Commutative and Associative}
-Let $A,B,C$ be matrices of the same dimensions then
+Let $X,Y,Z$ be matrices of the same dimensions then
 \begin{itemize}
-	\item $A+B = B+A$
-	\item $(A+B)+C= A+(B+C)$
+	\item $X+Y = Y+X$
+	\item $(X+Y)+Z= X+(Y+Z)$
 \end{itemize}
-\subsubsection*{Examples}
+\subsubsection*{Examples} Using the matrices defined above.
 \begin{itemize}
 	\item $A-B$
 \begin{align*}
@@ -158,6 +180,22 @@ Let $A,B,C$ be matrices of the same dimensions then
 \end{align*}
 \end{itemize}
 
+\subsection{Zero Matrix and Additive Inverse}
+The \textit{Zero Matrix} is just an $n\times m$ matrix with all elements equal to 0. For any matrix, $A$, $A+0=A$ and $A*0 =0$. For addition, $0$ must be a matrix of the same dimension as $A$ or else the operation is not defined.
+\\\\
+The \textit{Additive Inverse} of $A$ is the matrix added to $A$ such that the result is $0$. Simply, this is $A+ (-A) = 0$
+\\\\
+Remember, the $0$ matrix is not a number, it is a matrix with dimensions. Ususally we will just use 0 though.
+\subsubsection*{Examples}
+	\begin{align*}
+		\begin{bmatrix}	0 \\ 0 \\ 0	\end{bmatrix}, 
+		\begin{bmatrix} 0 & 0 & 0 \end{bmatrix},
+		\begin{bmatrix}
+			0 & 0 & 0 \\
+			0 & 0 & 0 \\
+			0 & 0 & 0
+		\end{bmatrix}
+	\end{align*}
 
 \subsection{Scalar Multiplication}
 Any matrix may be multiplied by a scalar (a constant number).
@@ -187,6 +225,43 @@ Any matrix may be multiplied by a scalar (a constant number).
 	\end{align*}
 \end{itemize}
 
+\subsection{Matrix Equation}
+Given the matrix operations we are now able to solve a matrix equation. Here is an example
+\begin{align*}
+	\begin{bmatrix}
+		w & x \\
+		y & z
+	\end{bmatrix}
+	+ 2\begin{bmatrix}
+		1 & 2 \\
+		-2 & 3
+	\end{bmatrix}
+	= \begin{bmatrix}
+		4 & -8 \\
+		16 & -2
+	\end{bmatrix}
+\end{align*}
+Performing scalar multiplication and then matrix addition, we have:
+\begin{align*}
+	\begin{bmatrix}
+		w+2 & x+4 \\
+		y-4 & z+6
+	\end{bmatrix}
+	= \begin{bmatrix}
+		4 & -8 \\
+		16 & -2
+	\end{bmatrix}
+\end{align*}
+and
+\begin{align*}
+	\begin{array}{lcl}
+		w+2=4 & \to & w=2 \\
+		x+4=-8 & \to & x=-12 \\
+		y-4=16 & \to & y=20 \\
+		z+6=-2 & \to & z=-8
+	\end{array}
+\end{align*}
+
 \subsection{Matrix Product of a Row Vector and Column Vector}
 Given a $1\times n$ row vector, $A=\begin{bmatrix}a_1 & a_2 & \cdots & a_n\end{bmatrix}$ and a $n\times 1$ column vector, $B=\begin{bmatrix}b_1 \\ b_2 \\ \vdots \\ b_n\end{bmatrix}$. The matrix product is defined as $a_1b_1 + a_2b_2 + \cdots + a_nb_n$. This operation is not commutative.
 \subsubsection*{Example}
@@ -212,7 +287,7 @@ For these examples, just use the dimensions of the given matrices in order.
 \begin{itemize}
 	\item $A * B$, $\bhighlight{3}\times \yhighlight{1}$ and $\yhighlight{3} \times \bhighlight{1}$. Notice that the inner terms, $1\neq 3$, therefore; this operation is not defined.
 	\item $A * C$, $\bhighlight{3} \times \yhighlight{1}$ and  $\yhighlight{1}\times \bhighlight{3}$. Since the inner terms, $1 = 1$, the product exists and its dimension is $3\times 3$.
-	\item $A * D$, $\bhighlight{3}\times \yhighlight{1}$ and $\yhighlight{2} \times \bhighlight{3}$. Notice that the inner terms, $1\neq 3$, therefore; this operation is not defined.
+	\item $A * D$, $\bhighlight{3}\times \yhighlight{1}$ and $\yhighlight{2} \times \bhighlight{3}$. Notice that the inner terms, $1\neq 2$, therefore; this operation is not defined.
 	\item $D * A$, $\bhighlight{2} \times \yhighlight{3}$ and  $\yhighlight{3}\times \bhighlight{1}$. Since the inner terms, $3 = 3$, the product exists and its dimension is $2\times 1$.
 \end{itemize}
 
