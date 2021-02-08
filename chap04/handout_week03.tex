@@ -1,0 +1,107 @@
+\documentclass[14pt]{extarticle}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+%\usepackage{tikz}
+%\usetikzlibrary{calc}
+%\usetikzlibrary{trees}
+\usepackage{graphicx}
+\graphicspath{ {../} }
+\usepackage[top=0.75in, bottom=0.75in, left=0.75in, right=0.75in]{geometry}
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{\ensuremath{#2}}}%
+\usepackage[shortlabels]{enumitem}
+% \usepackage{showframe}
+\title{\vspace{-5ex}HANDOUT Math 208 Week 03}
+\date{\vspace{-10ex}}
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+
+\begin{document}
+\maketitle	
+%\pagenumbering{gobble}	
+\section*{Homework  Chapter 3 Review}
+I wish to compare investments but Investment A is continuous compounding and Investment B is compounded semiannually. What formulas do I use?
+\\\\
+What is $m$ given compounding of:
+\begin{multicols}{3}
+	\begin{enumerate}[(a)]
+		\item Quarterly
+		\item Monthly
+		\item Semi-annually
+	\end{enumerate}
+\end{multicols}
+
+\section*{Matrices: Solve if possible}
+\begin{align*}
+	A &= \begin{bmatrix}
+		3 & 2  \\
+		0 & 1 
+	\end{bmatrix},
+	& B &= \begin{bmatrix}
+		1 & 2 \\
+		3 & -3
+	\end{bmatrix},
+	& C &= \begin{bmatrix}
+		3 & -2 & 4
+	\end{bmatrix},
+\end{align*}
+\begin{align*}
+	D &= \begin{bmatrix}
+		-2 \\
+		1 \\
+		5
+	\end{bmatrix},
+	& E &= \begin{bmatrix}
+		1 & 0 & 0 \\
+		0 & 2 & 3
+	\end{bmatrix}
+	& F &= \begin{bmatrix}
+		-2 \\
+		1 
+	\end{bmatrix},
+	& G &= \begin{bmatrix}
+		0 \\
+		1 \\
+		-1
+	\end{bmatrix}
+\end{align*}
+
+\subsection*{4.4}
+\begin{align*}
+	&A+B= & &2D= & &A + A +B = \\\\
+	&D-E= & &0D= & &A+B-A= \\\\
+	&C*D= & &D*C= & &3A+3B= \\\\
+	&A*B= & &B*A= & &A^2= \\\\
+	&DE= & &ED= & &DG=
+\end{align*}
+
+\subsection*{4.5}
+\begin{align*}
+	&I*B= & &\det(A)= && A^{-1}= \\\\
+	&B+I^4= & &\det(B)= && B^{-1}= \\\\
+	&\det(E)= & &\det(AB)= && (AB)^{-1}= \\\\
+	&E^{-1}= & &\det(A+B)= && (A+B)^{-1}= 
+\end{align*}
+\begin{itemize}
+	\item Setup the augmented matrix to find $B^{-1}$
+	\item Setup the augmented matrix to find $(DC)^{-1}$
+\end{itemize}
+
+\subsection*{4.6}
+Solve for X, if possible:
+\begin{align*}
+	&AX=F & &BX=F & &3(A+B)X =F \\
+	&AX-I=F & &3I - Bx=F & &A+B-A= \\
+\end{align*}
+Set up and solve the matrix equation for
+\begin{align*}
+	x_1 + 2&x_2 = -2 \\
+	3x_1 - 3&x_2  = 1
+\end{align*}
+How do I solve $GCX = D$? Is it possible? Setup the augmented matrix if it is possible.
+
+\noindent\rule{\textwidth}{1pt}
+{\footnotesize Copyright (C) 2021 Garold Dalton --- Released under GNU General Public License v3.0}
+
+
+\end{document}

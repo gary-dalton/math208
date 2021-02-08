@@ -28,76 +28,181 @@
 	\item Section 7.3, 7.4
 \end{itemize}
 
-\section*{Quiz Results}
-
 \section*{Goals}
 \begin{itemize}
-	\item Understand basic concepts of a set
-	\item Use set notations
-	\item State meaning of Union, Intersection, Disjoint, and Complement
-	\item Analyze Venn diagrams and sets
+	\item Understand and successfully count using sets
+	\item Understand and apply factorials
+	\item Analyze set problems using permutations and combinations
 \end{itemize}
 
-\section*{7.2 Sets}
-A set is any collection of objects. We denote a set using Capital letters and each object of a set is called a \textit{member} or \textit{element}.
+\section*{7.3 Basic Counting}
+Most people will say that they are able to count well, thank you. This is true but the foundations of counting begin in sets. Gaining a strong understanding of counting with set will go a long way when working with probabilities in Chapter 9.
 
-\subsection{Notation}
-\begin{itemize}
-	\item $x \in A$ means x is an element of A.
-	\item $x \notin A$ means x is not an element of A.
-	\item $\emptyset$ is an empty set or a set with no members. Note that $\emptyset \neq \{\emptyset\}$.
-	\item $S = \{1,x,car,8,z\}$ means S is a set containing a variety of elements.
-	\item The order of elements in a set does not matter.
-	\item $A \subset B$ means every element of A is also an element of B. Say this as "A is a subset of B". 
-	\item $A \not\subset B$ means not every element of A is also an element of B. Say this as "A is not a subset of B".
-	\item $S = P$ means S and P have exactly the same elements. Note that if $S \subset P$ and $P \subset S$, then $S = P$.
-\end{itemize}
-	
-
-\subsubsection{Examples}
-Given:
+\subsection{Addition Principle}
+\textbf{What you are used to}: If a college chemistry class consists of 13 males and 15 females, then, a total of 28 students are enrolled in the class.
+\\\\
+\textbf{With sets}: If M is the set of male students in the chemistry class and F is the set of female students in the class, the union of sets M and F, denoted $M\cup F$, is the set of all students in the class.
+\\\\
+These sets have no elements in common; therefore, the intersection $M\cap F = \emptyset$ and M and F are disjoint sets. The number of elements, denoted by $n(M\cup F)$, is given by 
+$n(M\cup F) = n(M) + n(F) = 13 + 15 = 28$.
+\\\\
+In this example, the number of elements in the union of sets M and F is the sum of elements in the individual sets.
+\\\\
+\textbf{This is not always the case}: A mathematics class consists of 22 math majors, 16 physics majors, and 7 students who are majoring in math and physics.
 \begin{align*}
-	A = \{-3,-1,1,3\} & & B=\{-1,1,-3,3\} & & C  \{–3, –2, –1, 0, 1, 2, 3\}
+	n(M\cup P) = n(M)+n(P) - n(M\cap P) = 22+16-7 = 31
 \end{align*}
-Then
-\begin{align*}
-	A &= B & A &\subset C & A &\subset B \\
-	C &\neq A & C &\not\subset A & B &\subset A \\
-	B &\neq \emptyset & 2 &\notin A & 2 &\in C
-\end{align*}
-
-\subsection{Venn Diagrams}
-An easy way to visualize set, their membership, and their interactions is using a Venn diagram.
-\begin{center}
-	\includegraphics[width=0.5\linewidth]{venn-1}
-\end{center}
-In this Venn diagram, U is all of the space and A is the space indicated by the circle. A may represent any set we choose.
 
 \begin{tcolorbox}[enhanced jigsaw,colback=bg,boxrule=0pt,arc=0pt] 
+	\textbf{Addition Principle for Counting}: For any two sets, $A,B$:
+	\begin{align*}
+		n(A\cup B) = n(A)+N(B) - n(A\cap B)
+	\end{align*}
+\end{tcolorbox}
+
+\subsubsection{Example}
+According to a survey of business firms in a certain city, 345 firms offer their employees group life insurance (GL), 285 offer long-term disability insurance (D), and 115 offer group life insurance and long-term disability insurance $(GL\cap D)$. How many firms offer their employees group life insurance or long-term disability insurance?
+\\\\
+Referring to the Addition Principle we see that:
+\begin{align*}
+	n(GL\cup D) &= n(GL)+n(D) - n(GL\cap D) \\
+	&= 345 + 285 - 115 \\
+	&= 515
+\end{align*}
+
+\subsection{Multiplication Principle}
+\begin{tcolorbox}[enhanced jigsaw,colback=bg,boxrule=0pt,arc=0pt] 
 	\begin{enumerate}
-		\item \textbf{Union}: $A \cap B$ all items that are elements of A or B.
-		\item \textbf{Intersection}: $A \cup B$ all items that are elements of both A and B.
-		\item \textbf{Complement}: $A'$ all items that are not elements of A.
-		\item \textbf{Disjoint}: $A$ and $B$ are disjoint when their intersection is empty, i.e., $A \cap B = \emptyset$.
+		\item If two operations $O_1$ and $O_2$ are performed in order with $N_1$ possible outcomes for the first operation and $N_2$ possible outcomes for the second operation, then there are:
+		\begin{align*}
+			N_1 * N_2
+		\end{align*}
+		possible combined outcomes of the first operation followed by the second.
+		\item In general, if n operations, $O_1,O_2, \cdots, O_n$, are performed in order, with possible outcomes $N_!, N_2,\cdots,N_n$, respectively, then there are:
+		\begin{align*}
+			N_1 * N_2 * \cdots * N_n
+		\end{align*}
+		possible combined outcomes of the operations performed in the given order. 
 	\end{enumerate}
 \end{tcolorbox}
 
-Using the below Venn diagram, we have that:
+\subsubsection{Example}
+\textbf{Code Words}: How many 4-letter code words are possible using the first 10 letters of the alphabet if (A) No letter can be repeated? (B) Letters can be repeated? (C) Adjacent letters cannot be alike.
+\begin{enumerate}[A)]
+	\item No repeat letters
+	\begin{itemize}
+		\item $O_1$ first letter: $N_1 = 10$
+		\item $O_2$ first letter: $N_2 = 9$
+		\item $O_3$ first letter: $N_3 = 8$
+		\item $O_4$ first letter: $N_4 = 7$
+	\end{itemize}
+	Thus there are $10*9*8*7 = 5040$ ways.
+	\item Letters may be repeated
+	\begin{itemize}
+		\item $O_1$ first letter: $N_1 = 10$
+		\item $O_2$ first letter: $N_2 = 10$
+		\item $O_3$ first letter: $N_3 = 10$
+		\item $O_4$ first letter: $N_4 = 10$
+	\end{itemize}
+	Thus there are $10*10*10*10 = 10000$ ways.
+	\item Adjacent letters must be different
+	\begin{itemize}
+		\item $O_1$ first letter: $N_1 = 10$
+		\item $O_2$ first letter: $N_2 = 9$
+		\item $O_3$ first letter: $N_3 = 9$
+		\item $O_4$ first letter: $N_4 = 9$
+	\end{itemize}
+	Thus there are $10*9*9*9 = 7290$ ways.
+\end{enumerate}
+
+\section*{7.4 Permutations and Combinations}
+We start this section by defining a mathematical operation called factorial. This might look similar to what we have just done in the Multiplication Principle.
+\begin{tcolorbox}[enhanced jigsaw,colback=bg,boxrule=0pt,arc=0pt] 
+	\textbf{Definition Factorial}:
+	For any natural number $n$, 
+	\begin{align*}
+		&n! = n(n – 1)(n – 2)*\cdots*2*1   \\
+		\\
+		&0! = 1 \\
+		\\
+		&n! = n(n – 1)!
+	\end{align*}
+\end{tcolorbox}
+\subsection{Factorial Examples}
 \begin{align*}
-	A &= \{1,2,5,6\} &  B&= \{3,4,5,6\}  & C &= \{8\}\\
-	A \cup B &= \{1,2,3,4,5,6\} & A \cap B&= \{5,6\} & A \cap C &= \emptyset\\
-	A' &= \{3,4,5,6,7,8\} & (A\cup B)' &= \{7,8\} & & \\
-	&\text{C is disjoint with both A and B}
+	4! &= 4*3*2*1 = 24 \\\\
+	\frac{9!}{8!} &= \frac{9*8!}{8!} = 9 \\\\
+	\frac{16!}{13!} &= \frac{16*15*14*13!}{13!}= 16*15*14 = 3360 \\\\
+	\frac{32!}{4!31!} &= \frac{32*31!}{0!31!}= \frac{32}{1} = 32
 \end{align*}
-\begin{center}
-	\includegraphics[width=0.5\linewidth]{venn-2}
-\end{center}
-Often, we are interested in how many elements are in a set. This is indicated by $n(A)$. For the above Venn diagram, we have:
+
+
+\subsection{Permutations}
+Say that we start with 5 shapes, $\Diamond, \Box, \bigcirc, \bigtriangleup, \cap$. How many different ways can theses shapes be arranged? It should follow that the number of ways is $5*4*3*2*1 = 5! = 120$. Now let's say that we have the same 4 shapes but are only interested in using 2 of them? 
+\\\\
+A permutation of a set of $n$ distinct objects taken $r$ at a time without repetition is an arrangement of $r$ of the $n$ objects in a specific order.
+\\\\
+In arranging our shapes, that means there are $5*4$ permutations. Denote the permutations as, $_nP_r$, then
 \begin{align*}
-	n(A) &= 4  & n(B)&= 4  & n(C) &= 1 \\
-	n(A \cup B) &= 6 & n(A \cap B)&= 2 & A \cap C &= 0 \\
-	n(A') &= 4 & n(A\cup B)' &= 2 & & \\
+	_nP_r = 5*4 = \frac{5*4*3*2*1}{3*2*1} = \frac{5!}{3!}
 \end{align*}
+\begin{tcolorbox}[enhanced jigsaw,colback=bg,boxrule=0pt,arc=0pt] 
+	\textbf{Permutations}: The number of permutations of n distinct objects taken r at a time without repetition is given by
+	\begin{align*}
+		_nP_r &= n(n-1)(n-2)* \cdots *(n-r+1)\\
+		&\text{or} \\
+		_nP_r &= \frac{n!}{(n-r)!}
+	\end{align*}
+\end{tcolorbox}
+
+\subsubsection{Example}
+Find the number of permutations of 30 objects taken 4 at a time. Find this using the formulas and then using the permutation key on your calculator.
+\begin{align*}
+	_{30}P_4 &= 30(30-1)(30-2)(30-3) = 30*29*28*27 = 657,720 \\
+	_{30}P_4 &= \frac{30!}{(30-4)!} = \frac{30!}{(26)!} = 657,720
+\end{align*}
+
+
+\subsection{Combinations}
+Starting with the same 5 shapes, $\Diamond, \Box, \bigcirc, \bigtriangleup, \cap$. How many different combinations of 2 can we choose? In this case, the order of the selection does not matter. For permutations, order matters but for combinations, order does not matter.
+\\\\
+A combination of a set of n distinct objects taken r at a time without repetition is an r-element subset of the set of n objects. The arrangement of the elements in the subset does not matter. Denote this by $_{n}C_r$.
+
+\begin{tcolorbox}[enhanced jigsaw,colback=bg,boxrule=0pt,arc=0pt] 
+	\textbf{Combinations}:  The number of combinations of n distinct objects taken r at a time without repetition is given by
+	\begin{align*}
+		_nC_r =&n\choose r\\
+		&= \frac{_nP_r}{r!}\\
+		&\text{or} \\
+		&= \frac{n!}{r!(n-r)!} &0 \leq r \leq n
+	\end{align*}
+The above formula are developed in the book if you are interested.
+\end{tcolorbox}
+
+\subsubsection{Examples}
+Choose 2 of 5 shapes. Find this using the formulas and then using the combination key on your calculator.
+\begin{align*}
+	_{5}C_2 &= \frac{_5P_2}{2!} = \frac{20}{2} = 10 \\
+	_{5}C_2 &= \frac{5!}{2!(5-2)!} = \frac{5!}{2!(3)!} = 10
+\end{align*}
+\\\\
+A company has 7 senior and 5 junior officers. It wants to form an ad hoc legislative committee.
+\begin{enumerate}[A)]
+	\item How many 4-officer committees with 1 senior officer and 3 junior officers can be formed?
+	\begin{align*}
+		_{7}C_1 * _{5}C_3 = 7*10=70
+	\end{align*}
+	\item How many 4-officer committees with 4 junior officers can be formed?
+	\begin{align*}
+		_{5}C_4 = 5
+	\end{align*}
+	\item How many 4-officer committees with at least 2 junior officers can be formed?
+	\begin{align*}
+		_{7}C_2 * _{5}C_2 +_{7}C_1*_{5}C_3 + _{5}C_4 = 21*10+7*10+5=285
+	\end{align*}
+\end{enumerate}
+
+
 
 \noindent\rule{\textwidth}{1pt}
 {\footnotesize Copyright (C) 2021 Garold Dalton --- Released under GNU General Public License v3.0}
