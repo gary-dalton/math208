@@ -1,0 +1,182 @@
+\documentclass[14pt]{extarticle}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+%\usepackage{tikz}
+%\usetikzlibrary{calc}
+%\usetikzlibrary{trees}
+\usepackage{graphicx}
+\graphicspath{ {../} }
+\usepackage[top=0.75in, bottom=0.75in, left=0.75in, right=0.75in]{geometry}
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{\ensuremath{#2}}}%
+\usepackage[shortlabels]{enumitem}
+% \usepackage{showframe}
+\title{\vspace{-5ex}HANDOUT Math 208 Week 04}
+\date{\vspace{-10ex}}
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+
+\begin{document}
+\maketitle	
+\pagenumbering{gobble}	
+\section*{Chapter 3 Review}
+\begin{itemize}
+	\item I wish to compare investments but Investment A is continuous compounding and Investment B is compounded semi-annually. What formulas do I use?
+	\item What is the interest rate if my investment triples after 14 years of continuous compounding?
+	\item What is $m$ given compounding of: a) Quarterly, b) Monthly, c) Semi-annually?
+	\item  Charges on a payday loan may not exceed \$15.50 per \$100 borrowed. Find the annual interest rate if \$400 is borrowed for 13 days at the maximum allowable charge.
+\end{itemize}
+
+\section*{Chapter 4 Review}
+\begin{enumerate}
+	\item \begin{itemize}
+		\item What is the coefficient matrix, A? Is A singular? What is $A^{-1}$?
+		\item Solve by substitution, augmented matrix, and matrix equation.
+	\end{itemize}
+	\begin{align*}
+		\text{Given: } &x+2y = 5\\
+		&3x - 10y =2	
+	\end{align*}
+
+	\item Give examples of two variable systems, in augmented matrix form, with a) unique solution, b) infinite solutions, c) no solution. If your example has a solution, what is it?
+	
+	\item Find x, y, and z
+	Given
+	$$\begin{bmatrix}
+		-x + 5y & z \\
+		-3 & 3x + 2y
+	\end{bmatrix}
+	= 
+	\begin{bmatrix}
+		2 & -9 \\
+		-3 & 11
+	\end{bmatrix}
+	$$
+	
+	\item Set up the augmented matrices to find a) the solution and b) the inverse of the coefficient matrix. Given:
+	\begin{align*}
+		\text{Given: } &2x_1+6x_2 + 15x_3 = -12 \\
+		&4x_1+7x_2 + 13x_3= -10 \\
+		&3x_1+6x_2 + 12x_3 = -9
+	\end{align*}
+	Know how to find these using Gauss-Jordan.
+	
+	\item What are the following matrices in reduce form? What are the solutions?
+	\begin{multicols}{3}
+		\begin{align*}
+			&\begin{bmatrix}
+				1 & 0 & | & 1\\
+				0 & 5 & | & 2
+			\end{bmatrix} 
+		\end{align*}
+		\\
+		\begin{align*}
+			&\begin{bmatrix}
+				1 & 0 & 0 & | & 3\\
+				0 & 1 & 0 & | & 2 \\
+				0 & 0 & 1 & | & -5
+			\end{bmatrix} 
+		\end{align*}
+		\vfill\null
+		\columnbreak
+		\begin{align*}
+			&\begin{bmatrix}
+				1 & 9 & | & 3\\
+				0 & 0 & | & 0
+			\end{bmatrix} 
+		\end{align*}
+		\\
+		\begin{align*}
+			&\begin{bmatrix}
+				1 & 7 & 0 & | & -2\\
+				0 & 1 & 2 & | & 3 \\
+				0 & 0 & 0 & | & 0
+			\end{bmatrix} 
+		\end{align*}
+		\vfill\null
+		\columnbreak
+		\begin{align*}
+			&\begin{bmatrix}
+				-1 & 2 & | & 2\\
+				0 & 0 & | & k
+			\end{bmatrix} 
+		\end{align*}
+		\\
+		\begin{align*}
+			&\begin{bmatrix}
+				1 & 3 & 7 & | & h\\
+				0 & 0 & 0 & | & k \\
+				0 & 0 & 0 & | & 0
+			\end{bmatrix} 
+		\end{align*}
+		\vfill\null
+	\end{multicols}
+	
+	\item Given:
+	\begin{align*}
+		&A = \begin{bmatrix}
+			1 \\
+			2 \\
+			3
+		\end{bmatrix} &
+		&B = \begin{bmatrix}
+			4 \\
+			0 \\
+			6
+		\end{bmatrix} &
+		&C =\begin{bmatrix}
+			4 & 5 & 6
+		\end{bmatrix} \\
+		&D = \begin{bmatrix}
+			1 & 2 & 3 \\
+			4 & 0 & 6
+		\end{bmatrix} &
+		&E = \begin{bmatrix}
+			2 & 1 \\
+			1 & 2 \\
+			3 & 4
+		\end{bmatrix} &
+		&F = \begin{bmatrix}
+			3 & 3 \\
+			4 & 1 \\
+			2 & 0
+		\end{bmatrix}
+	\end{align*}
+	Find:
+	\begin{multicols}{3}
+		\begin{align*}
+			&A+B = \\
+			&A+C = \\
+			&2E-D = \\
+			&2E-F =
+		\end{align*}
+		\vfill\null
+		\columnbreak
+		\begin{align*}
+			&AB = \\
+			&AC = \\
+			&DE = \\
+			&EF =
+		\end{align*}
+		\vfill\null
+		\columnbreak
+		\begin{align*}
+			&AI = \\
+			&A^2 = \\
+			&I^3D = \\
+			&AC(AC)^{-1} =
+		\end{align*}
+		\vfill\null
+	\end{multicols}	
+\end{enumerate}
+
+
+\section*{Chapter 5}
+\begin{enumerate}
+	\item Find two points on the lines, a) $2x-3y=6$ and b) $2y = 4x-10$.
+	\item Is the origin in the half-plane of  a) $2x-3y>6$ and b) $2y \geq 4x-10$.
+	\item Graph these inequalities.
+\end{enumerate}
+
+
+\end{document}
