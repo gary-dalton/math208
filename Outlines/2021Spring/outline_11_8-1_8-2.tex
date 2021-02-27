@@ -141,7 +141,7 @@ Compound Event:
 	\item $P(E) = 1/4 + 1/4 = 1/2$
 \end{itemize}
 
-\subsubsection*{Assignment from direct experiment}
+\subsubsection{Assignment from direct experiment}
 If a coin were flipped 10,000 times, we would expect heads to turn up about 5,000 times. Likely, the results differed from exactly 5,000 but we would not suspect the coin to be unfair unless there was consistent and substantial difference from 5,000.
 \\\\ 
 Suppose the results showed 3,750 heads out of 10,000 flips. Now, we suspect that the coin is not fair and may decide to assign probabilities as follows:
@@ -152,100 +152,149 @@ This assignment would be acceptable and reasonable.
 
 \subsection{Probability of Events}
 \begin{tcolorbox}[enhanced jigsaw,colback=bg,boxrule=0pt,arc=0pt] 
-	\begin{enumerate}
+	\textbf{Determining the probability of an event, E}
+	\begin{itemize}
 		\item If $E=\emptyset$, the empty set, then $P(E)=0$.
 		\item If E is a simple event, then $P(E)$ is assigned as above.
 		\item If E is a compound event, then $P(E)$ is the sum of its simple events.
 		\item If $E=S$, the sample space, then $P(E)=1$.
+	\end{itemize}
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw,colback=bg,boxrule=0pt,arc=0pt] 
+	\textbf{Steps for finding the probability of E}.
+	\begin{enumerate}
+		\item Determine the sample space, S
+		\item Assign probabilities to simple events
+		\item Add simple event probabilities to determine compound probability.
 	\end{enumerate}
 \end{tcolorbox}
 
+\subsubsection{Examples}
+\begin{enumerate}
+	\item Given two dice, what it the probability of rolling a prime number?
+	\begin{itemize}
+		\item The sample space, S, is given in the dice chart. $n(S)=36$.
+		\item Count the number of primes in the chart. $n(E)=18$ or $n(E)=n(S)/2$.
+		\item $P(E) = n(E)/n(S)= 18/36 = 1/2$.
+	\end{itemize}
+	\item A circular spinner us divided into 15 sectors of equal area, with 6 red, 5 blue, 3 yellow, and 1 green sector. What is the sample space and simple event probabilities?
+	\begin{itemize}
+		\item The sample space, $S= \{red, blue, yellow, green\}$. With $n(S)=15$.
+		\item $P(E =  red) = n(red)/n(S)= 6/15$
+		\item $P(E =  blue) = n(blue)/n(S)= 5/15$
+		\item $P(E =  yellow) = n(yellow)/n(S)= 3/15$
+		\item $P(E =  green) = n(green)/n(S)= 1/15$
+		\item Notice that the sum of the probabilities, $\frac{6}{15}+\frac{5}{15}+\frac{3}{15}+\frac{1}{15} = 1$
+	\end{itemize}
+\end{enumerate}
 
-\section*{7.4 Permutations and Combinations}
-We start this section by defining a mathematical operation called factorial. This might look similar to what we have just done in the Multiplication Principle.
+
+
+\section*{8.2 Union, Intersection, and Complement of Event; Odds}
+Recall the Venn diagrams and the definitions of Union, Intersection, Disjoint, and Complement from Chapter 7?
+\\
+\includegraphics[width=0.3\linewidth]{union}\includegraphics[width=0.3\linewidth]{intersect}
+\includegraphics[width=0.3\linewidth]{disjoint}
+\\
+\subsection{Probabilities}
 \begin{tcolorbox}[enhanced jigsaw,colback=bg,boxrule=0pt,arc=0pt] 
-	\textbf{Definition Factorial}:
-	For any natural number $n$, 
-	\begin{align*}
-		&n! = n(n – 1)(n – 2)*\cdots*2*1   \\
-		\\
-		&0! = 1 \\
-		\\
-		&n! = n(n – 1)!
-	\end{align*}
+	\textbf{Union and Intersection}.
+	\begin{enumerate}
+		\item \textbf{Event A or B} is $A\cup B = \{e \in S : e \in A \text{ \textbf{or} } e \in B\}$
+		\item \textbf{Event A and B} is $A\cap B = \{e \in S : e \in A \text{ \textbf{and} } e \in B\}$
+	\end{enumerate}
+	\textbf{Probability of the Union}
+	$$ P(A\cup B)= P(A) + P(B) -P(A\cap B)$$
+	If A and B are disjoint, i.e $A\cap B = \emptyset$, then $P(A\cup B) = P(A) + P(B)$.
 \end{tcolorbox}
-\subsection{Factorial Examples}
-\begin{align*}
-	4! &= 4*3*2*1 = 24 \\\\
-	\frac{9!}{8!} &= \frac{9*8!}{8!} = 9 \\\\
-	\frac{16!}{13!} &= \frac{16*15*14*13!}{13!}= 16*15*14 = 3360 \\\\
-	\frac{32!}{4!31!} &= \frac{32*31!}{0!31!}= \frac{32}{1} = 32
-\end{align*}
-
-
-\subsection{Permutations}
-Say that we start with 5 shapes, $\Diamond, \Box, \bigcirc, \bigtriangleup, \cap$. How many different ways can theses shapes be arranged? It should follow that the number of ways is $5*4*3*2*1 = 5! = 120$. Now let's say that we have the same 4 shapes but are only interested in using 2 of them? 
-\\\\
-A permutation of a set of $n$ distinct objects taken $r$ at a time without repetition is an arrangement of $r$ of the $n$ objects in a specific order.
-\\\\
-In arranging our shapes, that means there are $5*4$ permutations. Denote the permutations as, $_nP_r$, then
-\begin{align*}
-	_nP_r = 5*4 = \frac{5*4*3*2*1}{3*2*1} = \frac{5!}{3!}
-\end{align*}
 \begin{tcolorbox}[enhanced jigsaw,colback=bg,boxrule=0pt,arc=0pt] 
-	\textbf{Permutations}: The number of permutations of n distinct objects taken r at a time without repetition is given by
-	\begin{align*}
-		_nP_r &= n(n-1)(n-2)* \cdots *(n-r+1)\\
-		&\text{or} \\
-		_nP_r &= \frac{n!}{(n-r)!}
-	\end{align*}
-\end{tcolorbox}
-
-\subsubsection{Example}
-Find the number of permutations of 30 objects taken 4 at a time. Find this using the formulas and then using the permutation key on your calculator.
-\begin{align*}
-	_{30}P_4 &= 30(30-1)(30-2)(30-3) = 30*29*28*27 = 657,720 \\
-	_{30}P_4 &= \frac{30!}{(30-4)!} = \frac{30!}{(26)!} = 657,720
-\end{align*}
-
-
-\subsection{Combinations}
-Starting with the same 5 shapes, $\Diamond, \Box, \bigcirc, \bigtriangleup, \cap$. How many different combinations of 2 can we choose? In this case, the order of the selection does not matter. For permutations, order matters but for combinations, order does not matter.
-\\\\
-A combination of a set of n distinct objects taken r at a time without repetition is an r-element subset of the set of n objects. The arrangement of the elements in the subset does not matter. Denote this by $_{n}C_r$.
-
-\begin{tcolorbox}[enhanced jigsaw,colback=bg,boxrule=0pt,arc=0pt] 
-	\textbf{Combinations}:  The number of combinations of n distinct objects taken r at a time without repetition is given by
-	\begin{align*}
-		_nC_r =&n\choose r\\
-		&= \frac{_nP_r}{r!}\\
-		&\text{or} \\
-		&= \frac{n!}{r!(n-r)!} &0 \leq r \leq n
-	\end{align*}
-The above formula are developed in the book if you are interested.
+	\textbf{Probability of Complement}.
+	$$ P(E')= 1-P(E) $$
 \end{tcolorbox}
 
 \subsubsection{Examples}
-Choose 2 of 5 shapes. Find this using the formulas and then using the combination key on your calculator.
-\begin{align*}
-	_{5}C_2 &= \frac{_5P_2}{2!} = \frac{20}{2} = 10 \\
-	_{5}C_2 &= \frac{5!}{2!(5-2)!} = \frac{5!}{2!(3)!} = 10
-\end{align*}
+\begin{enumerate}
+	\item What is the probability that a number, selected at random from the first 140 positive integers, is divisible by 4 or 6?
+	\begin{itemize}
+		\item $n(S)= 140$.
+		\item Number of integers divisible by 4 is $n(A) = 140/4 =35$
+		\item Number of integers divisible by 6 is $n(B) = 140/6 =23$
+		\item Number of integers divisible by 4 and 6 is $n(A\cap B) = 140/(6*4) =5$
+		\begin{align*}
+			P(A\cup B) &= P(A) + P(B) -P(A\cap B) \\
+			& = \frac{35}{140}+ \frac{23}{140} - \frac{5}{140} \\
+			& = \frac{53}{140}
+		\end{align*}
+	\end{itemize}
+	\item From the previous example, what it the probability that an integer divisible by 4 is not selected?
+	\begin{itemize}
+		\item $P(E)= 35/140$.
+		\begin{align*}
+			P(E') &= 1-P(E) \\
+			&= 1-35/140 = 105/140 = 3/4
+		\end{align*}
+	\end{itemize}
+	\item (HW 25) With a random selection from 25 balls numbered 1 to 25, what is the probability that the number drawn is odd or a multiple of 4?
+	\begin{itemize}
+		\item The sample space, $n(S)=25$.
+		\item $n(A) = n($multiple of 4$) = 25/4 = 6$.
+		\item $P(A)=P($multiple of 4$) =6/25$
+		\item $n(B) = n($odd$) = 25/2+1 = 13$.
+		\item $P(B)=P($odd$) =13/25$
+		\item $A\cap B = \emptyset$.
+		\item $P(A\cap B)=0$
+		\begin{align*}
+			P(A\cup B) &= P(A) + P(B) -P(A\cap B) \\
+			& = \frac{6}{25}+ \frac{13}{25} - 0 \\
+			& = \frac{19}{25}
+			\end{align*}
+	\end{itemize}
+
+	\item A shipment of 45 precision parts, including 9 that are defective, is sent to an assembly plant. The quality control division selects 10 at random for testing and rejects the entire shipment if 1 or more in the sample are found to be defective.
+	What is the probability that the shipment will be rejected?
+	\begin{itemize}
+		\item Let E be the event that 1 or more parts in a random sample of 10 are defective.	
+		\item Then E´ is the event that no parts in a random sample of 10 are defective.
+		\item It is easier to find P(E´) and use that result to find P(E).
+		\item $n(S) = _{45}C_{10}$.
+		\item $n(E') = _{36}C_{10}$. ($36 = 45-9$)
+		\begin{align*}
+			P(E) &=1 - P(E') \\
+			&= 1 - \frac{_{36}C_{10}}{_{45}C_{10}} \\
+			& = 0.92
+		\end{align*}
+	\end{itemize}
+
+	\item If you are interested, look into the "Birthday Problem"
+\end{enumerate}
+
+\subsection{Odds}
+When the probability of an event E is known, especially in gaming,we speak of the odds for or against the event instead of the the probability. That is the number of winners to the number of losers. So, the odds of rolling a single die and getting a 2 are: 1 to 5. There is one roll (a 2) in which we win and five rolls (1,3,4,5,6) in which we lose.
 \\\\
-A company has 7 senior and 5 junior officers. It wants to form an ad hoc legislative committee.
-\begin{enumerate}[A)]
-	\item How many 4-officer committees with 1 senior officer and 3 junior officers can be formed?
-	\begin{align*}
-		_{7}C_1 * _{5}C_3 = 7*10=70
-	\end{align*}
-	\item How many 4-officer committees with 4 junior officers can be formed?
-	\begin{align*}
-		_{5}C_4 = 5
-	\end{align*}
-	\item How many 4-officer committees with at least 2 junior officers can be formed?
-	\begin{align*}
-		_{7}C_2 * _{5}C_2 +_{7}C_1*_{5}C_3 + _{5}C_4 = 21*10+7*10+5=285
-	\end{align*}
+Odds are used in gaming to make a fair game. In one roll, the odds for rolling a two are 1 to 5. This is a fair bet when: If you bet \$1 on rolling a 2, the house pays \$5 and returns your \$1 bet. You lose your \$1 for any other outcome. 
+\\\\
+There is a direct relationship between odds and probability.
+\begin{tcolorbox}[enhanced jigsaw,colback=bg,boxrule=0pt,arc=0pt] 
+	\textbf{Odds $\Leftrightarrow $ Probability}.
+	\begin{enumerate}
+		\item \textbf{Odds for E} $$= \frac{P(E)}{P(E')}$$
+		\item \textbf{Odds against E} $$= \frac{P(E')}{P(E)}$$
+		\item \textbf{P(E)} Given the odds are \textit{a to b}, then $$P(E)= \frac{a}{a+b}$$
+	\end{enumerate}
+\end{tcolorbox}
+
+\subsubsection{Examples}
+\begin{enumerate}
+	\item Given two dice, what are the odds of rolling 3? What are the odds against rolling 3?
+	\begin{itemize}
+		\item $P(E) = \frac{n(E)}{n(S)} = \frac{2}{36}$. so that the odds for E are $2:34$ or $1:17$.
+		\item The odds against rolling three are $34:2$ or $17:1$
+	\end{itemize}
+	\item Given the odds against an event are $5:3$, what is $P(E)$?
+	\begin{itemize}
+		\item The odds for E are $3:5$, then $P(E)=\frac{3}{3+5} = 3/8$
+	\end{itemize}
 \end{enumerate}
 
 

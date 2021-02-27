@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -14,7 +12,7 @@
    viewBox="0 0 210 297"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)"
    sodipodi:docname="venn.svg">
   <defs
      id="defs2" />
@@ -35,7 +33,8 @@
      inkscape:window-height="1417"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     inkscape:document-rotation="0" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -44,7 +43,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -58,231 +57,457 @@
        width="112.09978"
        height="64.753288"
        x="29.303255"
-       y="45.992702"
+       y="4.7176986"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="130.83928"
-       y="106.22276"
+       y="64.947784"
        id="text821-5"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96"><tspan
          sodipodi:role="line"
          id="tspan819-1"
          x="130.83928"
-         y="106.22276"
-         style="font-size:14.11111069px;stroke-width:0.26458332">U</tspan></text>
+         y="64.947784"
+         style="font-size:14.1111px;stroke-width:0.264583">U</tspan></text>
     <rect
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#0000f5;stroke-width:1.33551633;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#0000f5;stroke-width:1.33552;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect815-6"
        width="149.71107"
        height="86.479073"
        x="40.203396"
-       y="134.9364"
+       y="93.661469"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96" />
     <circle
-       style="opacity:0.51999996;fill:none;fill-opacity:0.24623114;stroke:#0000f5;stroke-width:1.33551633;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:0.52;fill:none;fill-opacity:0.246231;stroke:#0000f5;stroke-width:1.33552;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path817-1"
        cx="93.857628"
-       cy="178.17592"
+       cy="136.90094"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96"
        r="23.479532" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.65368557px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.35335535"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.65369px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353355"
        x="77.711021"
-       y="160.63808"
+       y="119.36311"
        id="text821-52"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96"><tspan
          sodipodi:role="line"
          id="tspan819-4"
          x="77.711021"
-         y="160.63808"
-         style="font-size:18.8456192px;stroke-width:0.35335535">A</tspan></text>
+         y="119.36311"
+         style="font-size:18.8456px;stroke-width:0.353355">A</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.65368557px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.35335535"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.65369px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353355"
        x="175.34149"
-       y="215.37463"
+       y="174.09966"
        id="text821-5-1"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96"><tspan
          sodipodi:role="line"
          id="tspan819-1-5"
          x="175.34149"
-         y="215.37463"
-         style="font-size:18.8456192px;stroke-width:0.35335535">U</tspan></text>
+         y="174.09966"
+         style="font-size:18.8456px;stroke-width:0.353355">U</tspan></text>
     <circle
-       style="opacity:0.52;fill:none;fill-opacity:0.24623114;stroke:#f52e00;stroke-width:1.33551633;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:0.52;fill:none;fill-opacity:0.246231;stroke:#f52e00;stroke-width:1.33552;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path817-1-6"
        cx="119.52238"
-       cy="179.57077"
+       cy="138.29579"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96"
        r="23.479532" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.65368557px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.35335535"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.65369px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353355"
        x="120.28746"
-       y="207.87233"
+       y="166.59735"
        id="text821-52-1"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96"><tspan
          sodipodi:role="line"
          id="tspan819-4-9"
          x="120.28746"
-         y="207.87233"
-         style="font-size:18.8456192px;stroke-width:0.35335535">B</tspan></text>
+         y="166.59735"
+         style="font-size:18.8456px;stroke-width:0.353355">B</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.30737114px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.35335535"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.3074px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353355"
        x="80.188347"
-       y="179.10583"
+       y="137.83086"
        id="text904"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96"><tspan
          sodipodi:role="line"
          id="tspan902"
          x="80.188347"
-         y="179.10583"
-         style="font-size:11.30737114px;stroke-width:0.35335535">1</tspan></text>
+         y="137.83086"
+         style="font-size:11.3074px;stroke-width:0.353355">1</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.30737114px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.35335535"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.3074px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353355"
        x="87.162468"
-       y="191.65923"
+       y="150.38425"
        id="text908"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96"><tspan
          sodipodi:role="line"
          id="tspan906"
          x="87.162468"
-         y="191.65923"
-         style="font-size:11.30737114px;stroke-width:0.35335535">2</tspan></text>
+         y="150.38425"
+         style="font-size:11.3074px;stroke-width:0.353355">2</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.30737114px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.35335535"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.3074px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353355"
        x="122.96294"
-       y="168.41217"
+       y="127.1372"
        id="text912"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96"><tspan
          sodipodi:role="line"
          id="tspan910"
          x="122.96294"
-         y="168.41217"
-         style="font-size:11.30737114px;stroke-width:0.35335535">3</tspan></text>
+         y="127.1372"
+         style="font-size:11.3074px;stroke-width:0.353355">3</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.30737114px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.35335535"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.3074px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353355"
        x="124.8227"
-       y="188.86957"
+       y="147.59459"
        id="text916"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96"><tspan
          sodipodi:role="line"
          id="tspan914"
          x="124.8227"
-         y="188.86957"
-         style="font-size:11.30737114px;stroke-width:0.35335535">4</tspan></text>
+         y="147.59459"
+         style="font-size:11.3074px;stroke-width:0.353355">4</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.30737114px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.35335535"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.3074px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353355"
        x="103.4354"
-       y="174.45641"
+       y="133.18143"
        id="text920"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96"><tspan
          sodipodi:role="line"
          id="tspan918"
          x="103.4354"
-         y="174.45641"
-         style="font-size:11.30737114px;stroke-width:0.35335535">5</tspan></text>
+         y="133.18143"
+         style="font-size:11.3074px;stroke-width:0.353355">5</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.30737114px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.35335535"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.3074px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353355"
        x="103.43542"
-       y="187.93971"
+       y="146.66473"
        id="text924"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96"><tspan
          sodipodi:role="line"
          id="tspan922"
          x="103.43542"
-         y="187.93971"
-         style="font-size:11.30737114px;stroke-width:0.35335535">6</tspan></text>
+         y="146.66473"
+         style="font-size:11.3074px;stroke-width:0.353355">6</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.30737114px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.35335535"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.3074px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353355"
        x="79.723396"
-       y="214.90627"
+       y="173.63129"
        id="text928"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96"><tspan
          sodipodi:role="line"
          id="tspan926"
          x="79.723396"
-         y="214.90627"
-         style="font-size:11.30737114px;stroke-width:0.35335535">7</tspan></text>
+         y="173.63129"
+         style="font-size:11.3074px;stroke-width:0.353355">7</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.30737114px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.35335535"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.3074px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353355"
        x="168.99213"
-       y="150.27945"
+       y="109.00451"
        id="text932"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96"><tspan
          sodipodi:role="line"
          id="tspan930"
          x="168.99213"
-         y="150.27945"
-         style="font-size:11.30737114px;stroke-width:0.35335535">8</tspan></text>
+         y="109.00451"
+         style="font-size:11.3074px;stroke-width:0.353355">8</tspan></text>
     <circle
-       style="opacity:0.51999996;fill:#00fff3;fill-opacity:0.24623114;stroke:#0000f5;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:0.52;fill:#00fff3;fill-opacity:0.246231;stroke:#0000f5;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path817"
        cx="85.353142"
-       cy="78.369347"
+       cy="37.094337"
        r="17.580866"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="81.115677"
-       y="82.548248"
+       y="41.273243"
        id="text821"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96"><tspan
          sodipodi:role="line"
          id="tspan819"
          x="81.115677"
-         y="82.548248"
-         style="stroke-width:0.26458332;font-size:14.11111111px">A</tspan></text>
+         y="41.273243"
+         style="font-size:14.1111px;stroke-width:0.264583">A</tspan></text>
     <circle
-       style="opacity:0.51999996;fill:none;fill-opacity:0.24623114;stroke:#00f52e;stroke-width:0.82527506;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:0.52;fill:none;fill-opacity:0.246231;stroke:#00f52e;stroke-width:0.825275;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path817-1-6-4"
        cx="172.15326"
-       cy="150.19104"
+       cy="108.91608"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96"
        r="14.509049" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.65368605px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.35335538"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.65369px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353355"
        x="167.1729"
-       y="170.28932"
+       y="129.01434"
        id="text821-52-1-1"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96"><tspan
          sodipodi:role="line"
          id="tspan819-4-9-6"
          x="167.1729"
-         y="170.28932"
-         style="font-size:18.8456192px;stroke-width:0.35335538">C</tspan></text>
+         y="129.01434"
+         style="font-size:18.8456px;stroke-width:0.353355">C</tspan></text>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#0000f5;stroke-width:0.908415;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect815-6-2"
+       width="90.258789"
+       height="66.36615"
+       x="8.1354055"
+       y="190.42464"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="C:\Users\Gary\OneDrive - UWM\math208\chap08\union.png" />
+    <circle
+       style="opacity:0.52;fill:none;fill-opacity:0.246231;stroke:#0000f5;stroke-width:1.33552;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path817-1-62"
+       cx="40.836521"
+       cy="223.29433"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       r="23.479532"
+       inkscape:export-filename="C:\Users\Gary\OneDrive - UWM\math208\chap08\union.png" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.65369px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353355"
+       x="24.689915"
+       y="226.92319"
+       id="text821-52-9"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="C:\Users\Gary\OneDrive - UWM\math208\chap08\union.png"><tspan
+         sodipodi:role="line"
+         id="tspan819-4-2"
+         x="24.689915"
+         y="226.92319"
+         style="font-size:18.8456px;stroke-width:0.353355">A</tspan></text>
+    <circle
+       style="opacity:0.52;fill:none;fill-opacity:0.246231;stroke:#f52e00;stroke-width:1.33552;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path817-1-6-7"
+       cx="66.501274"
+       cy="224.68918"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       r="23.479532"
+       inkscape:export-filename="C:\Users\Gary\OneDrive - UWM\math208\chap08\union.png" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.65369px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353355"
+       x="70.329933"
+       y="227.71609"
+       id="text821-52-1-14"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="C:\Users\Gary\OneDrive - UWM\math208\chap08\union.png"><tspan
+         sodipodi:role="line"
+         id="tspan819-4-9-0"
+         x="70.329933"
+         y="227.71609"
+         style="font-size:18.8456px;stroke-width:0.353355">B</tspan></text>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#0000f5;stroke-width:0.908415;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect815-6-2-5"
+       width="90.258789"
+       height="66.36615"
+       x="105.26533"
+       y="188.71883"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="C:\Users\Gary\OneDrive - UWM\math208\chap08\intersect.png" />
+    <circle
+       style="opacity:0.52;fill:none;fill-opacity:0.246231;stroke:#0000f5;stroke-width:1.33552;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path817-1-62-3"
+       cx="137.96646"
+       cy="221.58852"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       r="23.479532"
+       inkscape:export-filename="C:\Users\Gary\OneDrive - UWM\math208\chap08\intersect.png" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.65369px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353355"
+       x="121.81985"
+       y="225.21738"
+       id="text821-52-9-6"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="C:\Users\Gary\OneDrive - UWM\math208\chap08\intersect.png"><tspan
+         sodipodi:role="line"
+         id="tspan819-4-2-6"
+         x="121.81985"
+         y="225.21738"
+         style="font-size:18.8456px;stroke-width:0.353355">A</tspan></text>
+    <circle
+       style="opacity:0.52;fill:none;fill-opacity:0.246231;stroke:#f52e00;stroke-width:1.33552;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path817-1-6-7-0"
+       cx="163.63123"
+       cy="222.98337"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       r="23.479532"
+       inkscape:export-filename="C:\Users\Gary\OneDrive - UWM\math208\chap08\intersect.png" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.65369px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353355"
+       x="167.45987"
+       y="226.01028"
+       id="text821-52-1-14-6"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="C:\Users\Gary\OneDrive - UWM\math208\chap08\intersect.png"><tspan
+         sodipodi:role="line"
+         id="tspan819-4-9-0-4"
+         x="167.45987"
+         y="226.01028"
+         style="font-size:18.8456px;stroke-width:0.353355">B</tspan></text>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#0000f5;stroke-width:0.771857;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect815-6-2-0"
+       width="89.350937"
+       height="48.399639"
+       x="52.280399"
+       y="262.73395"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="C:\Users\Gary\OneDrive - UWM\math208\chap08\disjoint.png" />
+    <ellipse
+       style="opacity:0.52;fill:none;fill-opacity:0.246231;stroke:#0000f5;stroke-width:0.983145;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path817-1-62-5"
+       cx="79.479614"
+       cy="288.53503"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       rx="18.085545"
+       ry="16.518932"
+       inkscape:export-filename="C:\Users\Gary\OneDrive - UWM\math208\chap08\disjoint.png" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.65369px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353355"
+       x="73.820412"
+       y="294.11603"
+       id="text821-52-9-0"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="C:\Users\Gary\OneDrive - UWM\math208\chap08\disjoint.png"><tspan
+         sodipodi:role="line"
+         id="tspan819-4-2-7"
+         x="73.820412"
+         y="294.11603"
+         style="font-size:18.8456px;stroke-width:0.353355">A</tspan></text>
+    <ellipse
+       style="opacity:0.52;fill:none;fill-opacity:0.246231;stroke:#f52e00;stroke-width:0.90678;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path817-1-6-7-04"
+       cx="118.02538"
+       cy="288.88547"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       rx="16.383047"
+       ry="15.512707"
+       inkscape:export-filename="C:\Users\Gary\OneDrive - UWM\math208\chap08\disjoint.png" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.65369px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353355"
+       x="112.49501"
+       y="294.46646"
+       id="text821-52-1-14-2"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="C:\Users\Gary\OneDrive - UWM\math208\chap08\disjoint.png"><tspan
+         sodipodi:role="line"
+         id="tspan819-4-9-0-40"
+         x="112.49501"
+         y="294.46646"
+         style="font-size:18.8456px;stroke-width:0.353355">B</tspan></text>
+    <path
+       style="fill:#ffff00;stroke-width:1.31579"
+       d="M 139.33377,928.34389 C 117.07639,924.36663 92.934043,907.74303 81.431218,888.47416 73.286938,874.83133 70.432442,864.96369 69.768592,848.15789 69.031376,829.4948 71.16934,819.26718 78.948572,804.24256 100.11544,763.36137 151.5989,746.93913 193.02911,767.85303 l 8.09231,4.08499 -6.37253,5.0372 c -31.44291,24.85419 -43.14211,66.27746 -29.3738,104.00353 4.42524,12.12543 10.31622,21.67136 19.69382,31.91247 l 6.86439,7.49648 -3.6871,1.90004 c -11.19736,5.77019 -34.4211,8.64568 -48.91243,6.05615 z m -28.5957,-72.70264 c 1.17605,-1.93099 0.88896,-2.84791 -1.50793,-4.81617 -1.62829,-1.33711 -2.96052,-2.78028 -2.96052,-3.20704 0,-0.42677 3.84868,-0.77593 8.55263,-0.77593 8.33123,0 11.22318,1.60664 5.92105,3.28947 -3.18854,1.012 -3.58437,6.58967 -0.55028,7.75396 1.14472,0.43927 4.64892,0.79867 7.78712,0.79867 3.1382,0 6.64241,-0.3594 7.78712,-0.79867 2.90131,-1.11333 2.65816,-6.73564 -0.33234,-7.68479 -1.62694,-0.51637 -4.57745,-6.22781 -9.05229,-17.52288 l -6.63865,-16.75682 -10.77722,-0.38366 -10.777235,-0.38365 0.421624,3.67313 c 0.332918,2.90034 1.182908,3.76072 4.040041,4.08947 1.99014,0.229 3.61843,0.66899 3.61843,0.97777 0,1.77256 -9.879711,24.99724 -10.791523,25.36811 -3.354563,1.36443 -4.944965,4.43085 -3.600755,6.94253 1.192561,2.22832 2.539254,2.54511 9.400058,2.21125 6.03997,-0.29391 8.36507,-0.97585 9.46067,-2.77475 z"
+       id="path473"
+       transform="scale(0.26458333)"
+       inkscape:export-filename="C:\Users\Gary\OneDrive - UWM\math208\chap08\union.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:#ffff00;stroke-width:1.31579"
+       d="m 192.39767,911.12355 c -8.6094,-7.93587 -17.56884,-22.20091 -22.09494,-35.17914 -3.38196,-9.69748 -3.96797,-13.33938 -4.04764,-25.15494 -0.11044,-16.37932 1.6866,-24.60043 8.51435,-38.95161 5.59329,-11.75648 19.75909,-28.29944 28.06166,-32.77067 l 4.71182,-2.53748 5.3855,5.22199 c 31.96412,30.99367 35.6305,78.98521 8.74749,114.50139 -5.17809,6.84098 -20.14611,20.32586 -22.56141,20.32586 -0.43913,0 -3.4617,-2.45494 -6.71683,-5.4554 z"
+       id="path475"
+       transform="scale(0.26458333)"
+       inkscape:export-filename="C:\Users\Gary\OneDrive - UWM\math208\chap08\union.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:#ffff00;stroke-width:1.31579"
+       d="m 234.55909,933.05283 c -8.98544,-1.97808 -19.41598,-5.90663 -25.49041,-9.60072 l -4.14011,-2.51775 7.79525,-6.12429 c 14.58307,-11.45712 26.91737,-31.45808 31.16012,-50.52839 1.59787,-7.18212 2.01614,-13.72354 1.56504,-24.47591 -0.99134,-23.62915 -8.49086,-41.72172 -24.43047,-58.9384 -8.3225,-8.98929 -8.47233,-8.59034 4.98795,-13.28141 12.2223,-4.25962 37.3134,-4.29052 50.65789,-0.0624 25.86395,8.19487 47.86484,30.00867 56.11149,55.63432 3.84901,11.96045 4.71941,33.19335 1.86084,45.39474 -3.68884,15.74533 -10.42655,27.50813 -23.06994,40.2759 -9.12768,9.21746 -13.30235,12.33585 -22.40239,16.73409 -18.04669,8.72235 -37.12226,11.33895 -54.60526,7.49021 z m 69.85387,-76.08673 c 4.09765,-4.76846 4.04363,-10.20253 -0.15099,-15.18756 -2.00016,-2.37705 -2.78601,-4.28182 -1.97368,-4.78387 0.74236,-0.4588 1.34975,-3.36051 1.34975,-6.44823 0,-4.33128 -0.77499,-6.34289 -3.39177,-8.80392 -3.17206,-2.98325 -4.34404,-3.18989 -18.09211,-3.18989 h -14.70033 l -0.41635,3.61842 c -0.33533,2.91432 0.11274,3.61842 2.30263,3.61842 2.57548,0 2.71898,0.72917 2.71898,13.81579 0,12.9386 -0.16708,13.81579 -2.63158,13.81579 -1.8797,0 -2.63158,0.8772 -2.63158,3.07018 0,1.68859 0.43997,3.51014 0.9777,4.04787 0.53774,0.53774 8.28777,0.78445 17.22229,0.54825 15.93661,-0.42131 16.30474,-0.49945 19.41704,-4.12125 z"
+       id="path477"
+       transform="scale(0.26458333)"
+       inkscape:export-filename="C:\Users\Gary\OneDrive - UWM\math208\chap08\union.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:#ffff00;stroke-width:1.31579"
+       d="m 279.95383,830.39474 c 0,-4.36934 0.23153,-4.60527 4.5196,-4.60527 6.02202,0 11.26987,2.10774 11.26987,4.52641 0,2.78996 -4.22163,4.68412 -10.43981,4.68412 -5.23671,0 -5.34966,-0.0972 -5.34966,-4.60526 z"
+       id="path479"
+       transform="scale(0.26458333)"
+       inkscape:export-filename="C:\Users\Gary\OneDrive - UWM\math208\chap08\union.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:#ffff00;stroke-width:1.31579"
+       d="m 279.95383,848.81579 v -4.60526 h 6.66545 c 7.77153,0 11.7556,1.74367 11.7556,5.14497 0,2.66837 -4.57841,4.06555 -13.32237,4.06555 -4.94987,0 -5.09868,-0.13441 -5.09868,-4.60526 z"
+       id="path481"
+       transform="scale(0.26458333)"
+       inkscape:export-filename="C:\Users\Gary\OneDrive - UWM\math208\chap08\union.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:#ffff00;stroke-width:1.31579"
+       d="m 111.20383,839.33456 c 1.62829,-0.31362 4.29276,-0.31362 5.92105,0 1.62829,0.31362 0.29605,0.57022 -2.96053,0.57022 -3.25658,0 -4.58881,-0.2566 -2.96052,-0.57022 z"
+       id="path485"
+       transform="scale(0.26458333)"
+       inkscape:export-filename="C:\Users\Gary\OneDrive - UWM\math208\chap08\union.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:#ffff00;stroke-width:1.31579"
+       d="m 559.48562,904.52864 c -8.89946,-8.20324 -18.41519,-23.33572 -22.44525,-35.69376 -2.90688,-8.91387 -3.54343,-13.34574 -3.63128,-25.28225 -0.18331,-24.9088 7.1724,-42.85141 24.87692,-60.68167 14.58714,-14.69074 15.08789,-14.77041 25.09943,-3.99317 9.21175,9.91626 17.64992,25.10199 20.94919,37.70116 2.70346,10.32386 3.03273,29.47712 0.67861,39.47368 -2.41425,10.25193 -9.31173,24.74131 -15.98585,33.58111 C 583.79318,896.56641 568.90549,910 566.45663,910 c -0.56941,0 -3.70636,-2.46212 -6.97101,-5.47136 z"
+       id="path487"
+       transform="scale(0.26458333)"
+       inkscape:export-filename="C:\Users\Gary\OneDrive - UWM\math208\chap08\intersect.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
   </g>
 </svg>
