@@ -116,7 +116,7 @@ Compound Event:
 		}
 		child {
 			node[end, label=right:
-			{H$\to$ combined event HT $p=\frac{1}{4}$}] {}
+			{H$\to$ combined event TH $p=\frac{1}{4}$}] {}
 		}
 	}
 	child {
@@ -136,7 +136,7 @@ Compound Event:
 	\item $P(H) = 1/2$
 	\item What is the probability of flipping a head or a tail on one flip?
 	\item $P(H \text{ or } T) = P(H) + P(T) = 1/2+1/2 = 1$
-	\item What is the event two of the same were flipped on two flips? $P(E)$?
+	\item What is the event that two of the same were flipped on two flips? $P(E)$?
 	\item $E = \{HH, TT\}$
 	\item $P(E) = 1/4 + 1/4 = 1/2$
 \end{itemize}
@@ -172,21 +172,21 @@ This assignment would be acceptable and reasonable.
 
 \subsubsection{Examples}
 \begin{enumerate}
-	\item Given two dice, what it the probability of rolling a prime number?
+	\item Given two dice, what it the probability of rolling an even number? A prime number?
 	\begin{itemize}
 		\item The sample space, S, is given in the dice chart. $n(S)=36$.
 		\item Count the number of primes in the chart. $n(E)=18$ or $n(E)=n(S)/2$.
 		\item $P(E) = n(E)/n(S)= 18/36 = 1/2$.
 	\end{itemize}
-	\item A circular spinner us divided into 15 sectors of equal area, with 6 red, 5 blue, 3 yellow, and 1 green sector. What is the sample space and simple event probabilities?
-	\begin{itemize}
-		\item The sample space, $S= \{red, blue, yellow, green\}$. With $n(S)=15$.
-		\item $P(E =  red) = n(red)/n(S)= 6/15$
-		\item $P(E =  blue) = n(blue)/n(S)= 5/15$
-		\item $P(E =  yellow) = n(yellow)/n(S)= 3/15$
-		\item $P(E =  green) = n(green)/n(S)= 1/15$
-		\item Notice that the sum of the probabilities, $\frac{6}{15}+\frac{5}{15}+\frac{3}{15}+\frac{1}{15} = 1$
-	\end{itemize}
+	\item A circular spinner is divided into 15 sectors of equal area, with 6 red, 5 blue, 3 yellow, and 1 green sector. What is the sample space and simple event probabilities?
+
+		$$ \text{The sample space, }= S = \text{\{red, blue, yellow, green\}. With } n(S)=15$$
+		$$P(E =  red) = \frac{n(red)}{n(S)}= 6/15$$
+		$$P(E =  blue) = \frac{n(blue)}{n(S)}= 5/15$$
+		$$P(E =  yellow) = \frac{n(yellow)}{n(S)}= 3/15$$
+		$$P(E =  green) = \frac{n(green)}{n(S)}= 1/15$$		
+	Notice that the sum of the probabilities, $\frac{6}{15}+\frac{5}{15}+\frac{3}{15}+\frac{1}{15} = 1$
+
 \end{enumerate}
 
 
@@ -220,11 +220,11 @@ Recall the Venn diagrams and the definitions of Union, Intersection, Disjoint, a
 		\item $n(S)= 140$.
 		\item Number of integers divisible by 4 is $n(A) = 140/4 =35$
 		\item Number of integers divisible by 6 is $n(B) = 140/6 =23$
-		\item Number of integers divisible by 4 and 6 is $n(A\cap B) = 140/(6*4) =5$
+		\item Number of integers divisible by 4 and 6. Since 12 is the least common multiple of 4 and 6, we have $n(A\cap B) = 140/12 =11$
 		\begin{align*}
 			P(A\cup B) &= P(A) + P(B) -P(A\cap B) \\
-			& = \frac{35}{140}+ \frac{23}{140} - \frac{5}{140} \\
-			& = \frac{53}{140}
+			& = \frac{35}{140}+ \frac{23}{140} - \frac{11}{140} \\
+			& = \frac{47}{140}
 		\end{align*}
 	\end{itemize}
 	\item From the previous example, what it the probability that an integer divisible by 4 is not selected?
@@ -270,7 +270,7 @@ Recall the Venn diagrams and the definitions of Union, Intersection, Disjoint, a
 \end{enumerate}
 
 \subsection{Odds}
-When the probability of an event E is known, especially in gaming,we speak of the odds for or against the event instead of the the probability. That is the number of winners to the number of losers. So, the odds of rolling a single die and getting a 2 are: 1 to 5. There is one roll (a 2) in which we win and five rolls (1,3,4,5,6) in which we lose.
+When the probability of an event E is known, especially in gaming, we speak of the odds for or against the event instead of the the probability. That is the number of winners to the number of losers. So, the odds of rolling a single die and getting a 2 are: 1 to 5. There is one roll (a 2) in which we win and five rolls (1,3,4,5,6) in which we lose.
 \\\\
 Odds are used in gaming to make a fair game. In one roll, the odds for rolling a two are 1 to 5. This is a fair bet when: If you bet \$1 on rolling a 2, the house pays \$5 and returns your \$1 bet. You lose your \$1 for any other outcome. 
 \\\\

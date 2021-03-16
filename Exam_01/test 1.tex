@@ -1,0 +1,177 @@
+
+\documentclass[11pt]{article} % use larger type; default would be 10pt
+\usepackage{amsmath,amsfonts,amssymb, amsthm}
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+\usepackage{mathptmx, mathtools}
+\DeclareMathAlphabet{\pazocal}{OMS}{zplm}{m}{n}
+\newcommand\inner[2]{\langle #1, #2 \rangle}
+\parindent 0em
+\parskip .5em
+\setlength{\textwidth}{6in} \setlength{\topmargin}{-0.2in}
+\setlength{\textheight}{9.0in} \setlength{\oddsidemargin}{0in}
+\renewcommand{\baselinestretch}{1.1}
+%\setenumerate[0]{label=(\Alph*)}
+\def\R{{\mathbb R}}
+\def\L{\pazocal{L}}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+%%% Examples of Article customizations
+% These packages are optional, depending whether you want the features they provide.
+% See the LaTeX Companion or other references for full information.
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+% These packages are all incorporated in the memoir class to one degree or another...
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+\usepackage{tikz}
+%\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+\newtheorem*{lem}{Lemma}
+
+%%% END Article customizations
+
+%%% The "real" document content comes below...
+
+\title{Math 208 Exam 1}
+%\author{Liam Jemison}
+\date{} % Activate to display a given date or no date (if empty),
+         % otherwise the current date is printed 
+
+\begin{document}
+
+\maketitle
+\begin{enumerate}
+\item Suppose $\$20,000$ is invested at an annual interest rate of $1.75\%.$ Compute the balance after 3 years if interest is compounded monthly.
+\item Suppose $\$5,500$ is invested in a retirement account. If the money is invested at a $6\%$ annual rate, compounded continuously, how much will be in the account after $40$ years? 
+\item Suppose $\$8,000$ is invested at an annual interest rate of $3.5\%.$ Compute the balance after 10 years if interest is compounded daily.
+\item How much do you need to deposit in a bank account that earns interest at a $3\%$ annual rate, compounded quarterly, to have $\$63,500$ in $5$ years?
+\item Find the effective annual rate of an investment account that earns $3.5\%$ annual interest compounded quarterly. Round your answer the nearest hundredth of a percent.  
+\item Find the effective annual rate of an investment account that earns $3.5\%$ annual interest compounded continuously. Round your answer the nearest hundredth of a percent.  
+\item Find $x,y$ and $z$ that satisfy 
+$$\begin{bmatrix}
+2x - y & z \\
+4 & x + 3y
+\end{bmatrix}
+= 
+\begin{bmatrix}
+\text{-}9 & 13 \\
+4 & \text{-}1
+\end{bmatrix}.
+$$
+\item Compute the following, if possible. 
+%\text{-} gives a rather hacky shorter minus for matrix alignment purposes
+$$\begin{bmatrix}
+1 & 2 & 3 \\
+\text{-}3 & 2 & \text{-}1
+\end{bmatrix}
++ 
+\begin{bmatrix}
+2 & 5 \\
+4 & \text{-}3
+\end{bmatrix}.
+$$
+\item Given $A = \begin{bmatrix}
+\text{-}1 & 1 \\
+6 & 3 \\
+0 & \text{-}4
+\end{bmatrix},$ and $B = \begin{bmatrix}
+2 & \text{-}1 \\
+8 & 3 \\
+\text{-}5 & 2
+\end{bmatrix}, $ compute $A - 6B.$
+\item Compute, if possible, the product 
+$$\begin{bmatrix}
+\text{-}2 & 1 & 0\\
+3 & \text{-}1 & 4 
+\end{bmatrix}\begin{bmatrix}
+4 & 5 \\
+\text{-}6 & 3 \\
+9 & 0
+\end{bmatrix}.$$
+\item Compute, if possible, the product 
+$$\begin{bmatrix}
+1 & 0 & 0\\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{bmatrix}\begin{bmatrix}
+\text{-}6 & 6 & 0 \\
+12 & \text{-}4 & 8 \\
+9  & 0& 1
+\end{bmatrix}.$$
+\item If $B = \begin{bmatrix} 
+1 & 0 \\
+0 & 1
+\end{bmatrix},$
+compute $B^{20}.$
+\item Find the determinant of the matrix $\begin{bmatrix} 4 &\text{-}20 \\ 2 &\text{-}9\end{bmatrix}$
+
+\item Find $x$ so that the matrix $\begin{bmatrix} 3 & 1 \\ 4x -1 & 4x + 3\end{bmatrix}$ is not invertible. 
+\item Let $A = \begin{bmatrix} 5 &8\\ \text{-}7 &\text{-}11\end{bmatrix}.$
+	\begin{enumerate}
+		\item[(a)] Find $A^{-1},$ using the formula for the inverse of a $2\times 2$ matrix.  
+		\item[(b)] Find $A \cdot A^{-1}.$
+	\end{enumerate}
+\item Use the general approach to inverting square matrices (i.e. not the explicit formula for $2\times2$ matrices) to find the inverse of $$\begin{bmatrix} 2 & 4 \\ \text{-}3 & 2 \end{bmatrix}.$$
+
+\item Find $x_1$ and $x_2$ that satisfy $$\begin{bmatrix} x_1 \\ x_2 \end{bmatrix} = \begin{bmatrix} 3 & \text{-}2 \\ 1 & 4 \end{bmatrix} \cdot \begin{bmatrix} \text{-}2 \\ 1 \end{bmatrix}.$$
+\item Find $x_1$ and $x_2$ using the inverse of the coefficient matrix in the equation 
+$$\begin{bmatrix} 1 & 3 \\ 1 & 4 \end{bmatrix} \cdot \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} =  \begin{bmatrix} 9 \\ 6 \end{bmatrix}.$$
+
+\item Explain why the following system of linear equations cannot be solved using the inverse of the coefficient matrix. 
+\begin{align*}
+-2x_1 + 4x_2 &= -5 \\
+6x_1 - 12x_2 &= 15
+\end{align*}
+\item Find a solution, if one exists, to the sytem of linear equations in problem $19.$
+\end{enumerate}
+\section*{Formulas}
+\begin{align*}
+A = &P(1+rt)  \\
+	A = &P(1+i)^n  \\
+	A = &P\left(1+\dfrac{r}{m}\right)^{mt}  \\
+	A = &Pe^{rt} \\
+	APY &= (1+r/m)^m -1 \\
+	APY &= e^r -1 \\
+	&A = \text{ Amount / Future value} \\
+	&P = \text{ Principal / Present value} \\
+	&i = \text{ decimal rate per compounding period} \\
+	&n = \text{ total number of compounding periods} \\
+	&r = \text{ decimal annual nominal interest rate} \\
+	&m = \text{ number of compounding periods per year} \\
+	&t = \text{ time in years} \\
+	&\text{Note that } i=r/m \text{ and } n= mt \\
+	&APY = \text{Annual Percentage Yield}
+\end{align*}
+Consider the matrix $A = \begin{bmatrix} a & b \\ c & d \end{bmatrix}.$ Then the inverse of $A$ is 
+$$\begin{bmatrix} a & b \\ c & d \end{bmatrix}^{-1} = \dfrac{1}{D}\begin{bmatrix} d & \text{-}b \\ \text{-}c & a \end{bmatrix},$$ as long as $D,$ the determinant of $A,$ given by $D = ad-bc$ is nonzero.
+\end{document}
