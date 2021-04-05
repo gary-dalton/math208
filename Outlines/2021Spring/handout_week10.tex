@@ -1,0 +1,154 @@
+\documentclass[14pt]{extarticle}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{nccmath}
+\usepackage{tikz}
+%\usetikzlibrary{calc}
+\usetikzlibrary{trees}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\graphicspath{ {../../chap09/} }
+\usepackage[top=0.75in, bottom=0.75in, left=0.75in, right=0.75in]{geometry}
+\newcommand*{\Scale}[2][1.5]{\scalebox{#1}{\ensuremath{#2}}}%
+\usepackage[shortlabels]{enumitem}
+\usepackage[most]{tcolorbox}
+\definecolor{bg}{RGB}{255,249,227}
+% \usepackage{showframe}
+%\usepackage{caption}
+%\usepackage{fdsymbol}
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+
+
+
+\title{\vspace{-5ex}HANDOUT Math 208 Week 10}
+\date{\vspace{-10ex}}
+
+\begin{document}
+\maketitle		
+
+\section{Limits Review}
+Find the following limits:
+\begin{enumerate}
+	\item \begin{fleqn}	\begin{equation*}
+			\lim_{x\to -2}\frac{x^2 + x - 2}{10-3x} =
+	\end{equation*}	\end{fleqn}
+	\vspace{.5cm}
+	
+	\item
+\begin{fleqn}
+	\begin{equation*}f(x) =\begin{cases}
+			\Scale{\frac{x^2 -4x - 12}{x^2 -36}} \text{ for $x\geq 6$}\\\\
+			\Scale{\frac{x}{9}} \text{ for $x < 6$}
+	\end{cases} \end{equation*}
+\end{fleqn}
+	\begin{fleqn}\begin{equation*}\lim_{x\to 6}f(x) =\end{equation*} \end{fleqn}
+	\vspace{1.5cm}
+	
+	\item \begin{fleqn}\begin{equation*}\lim_{x\to \infty}\frac{-3x^5 +3x^3 + 1}{4x^4-9} \end{equation*} \end{fleqn}
+	\vspace{1cm}
+	
+	\item \begin{fleqn}\begin{equation*}\lim_{x\to \infty}\frac{-3x^4 +3x^3 + 1}{4x^4-9} \end{equation*} \end{fleqn}
+	\vspace{1cm}
+	
+	\item 
+	\begin{fleqn}\begin{equation*}\lim_{x\to \infty}\frac{-3x^4 +3x^3 + 1}{4x^5-9} \end{equation*} \end{fleqn}
+	\vspace{1cm}
+\end{enumerate}
+
+\section{Section 9.4}
+\begin{enumerate}
+	\item Name two of three things that the derivative represents? \vspace{1cm}
+	
+	\item Say you throw a ball straight up into the air. When is that ball's velocity exactly zero? \vspace{1cm}
+	
+	\item What is the definition for the derivative? What process do we use to find that derivative? \vspace{2cm}
+	
+	Use the four-step process to find the derivative of the following:
+	\item $f(x) = 10$
+	\begin{fleqn}\begin{equation*}f(x+h) =\end{equation*} \end{fleqn}
+	\begin{fleqn}\begin{equation*}f(x+h) - f(x) =\end{equation*} \end{fleqn}
+	\begin{fleqn}\begin{equation*}\frac{f(x+h) - f(x)}{h} =\end{equation*} \end{fleqn}
+	\begin{fleqn}\begin{equation*}\lim_{h\to 0}\frac{f(x+h) - f(x)}{h} =\end{equation*} \end{fleqn}
+	\vspace{1cm}
+
+	\item $f(x) = 3x$ 
+	\begin{fleqn}\begin{equation*}f(x+h) =\end{equation*} \end{fleqn}
+	\vspace{1cm}
+	\begin{fleqn}\begin{equation*}f(x+h) - f(x) =\end{equation*} \end{fleqn}
+	\vspace{1cm}
+	\begin{fleqn}\begin{equation*}\frac{f(x+h) - f(x)}{h} =\end{equation*} \end{fleqn}
+	\vspace{1cm}
+	\begin{fleqn}\begin{equation*}\lim_{h\to 0}\frac{f(x+h) - f(x)}{h} =\end{equation*} \end{fleqn}
+	\vspace{1cm}
+	
+	\item $f(x) = x^2$
+	\begin{fleqn}\begin{equation*}f(x+h) =\end{equation*} \end{fleqn}
+	\vspace{1cm}
+	\begin{fleqn}\begin{equation*}f(x+h) - f(x) =\end{equation*} \end{fleqn}
+	\vspace{1cm}
+	\begin{fleqn}\begin{equation*}\frac{f(x+h) - f(x)}{h} =\end{equation*} \end{fleqn}
+	\vspace{1cm}
+	\begin{fleqn}\begin{equation*}\lim_{h\to 0}\frac{f(x+h) - f(x)}{h} =\end{equation*} \end{fleqn}
+	\vspace{1cm}
+	
+	\item $f(x) = x^2 + 3x - 10$
+	\begin{fleqn}\begin{equation*}f(x+h) =\end{equation*} \end{fleqn}
+	\vspace{1.5cm}
+	\begin{fleqn}\begin{equation*}f(x+h) - f(x) =\end{equation*} \end{fleqn}
+	\vspace{1.5cm}
+	\begin{fleqn}\begin{equation*}\frac{f(x+h) - f(x)}{h} =\end{equation*} \end{fleqn}
+	\vspace{1.5cm}
+	\begin{fleqn}\begin{equation*}\lim_{h\to 0}\frac{f(x+h) - f(x)}{h} =\end{equation*} \end{fleqn}
+	\vspace{1.5cm}
+	\begin{fleqn}\begin{equation*}f'(x) =\end{equation*} \end{fleqn}
+
+	
+	\item What is the equation of the tangent line for $f(x) = x^2 + 3x - 10$ at $x = 2$?
+	\begin{fleqn}\begin{equation*}m = f'(2) =\end{equation*} \end{fleqn}
+	\vspace{1cm}
+	\begin{fleqn}\begin{equation*}(y-y_0) = m(x-x_0) \end{equation*} \end{fleqn}
+	\vspace{.5cm}
+	
+\end{enumerate}
+
+\section{Section 9.5}
+\begin{enumerate}
+	\item $f(x) =4$. What is $f'(x)=$
+	\vspace{1cm}
+	
+	\item $y =7x^{10}$. What is $y'=$
+	\vspace{1cm}
+	
+	\item $y =7x^{10}-4$. What is $\frac{dy}{dx}=$
+	\vspace{1cm}
+	
+	\item $f(x) =-3x^3 + 2x^2 -2x$. What is $\frac{d}{dx}f(x)=$
+	\vspace{1cm}
+	
+	\item $f(x) =4\sqrt{x}$. What is $f'(x)=$
+	\vspace{1cm}
+	
+	\item $y =\frac{2\sqrt{x}}{x^2}$. What is $y'=$
+	\vspace{1cm}
+	
+	\item $y =\frac{2\sqrt{x} + 4x^3+1}{x^2}$. What is $\frac{dy}{dx}=$
+	\vspace{1cm}
+	
+	\item $g(t) =\frac{x^2-4}{x^3 +2x^2}$. What is $\frac{d}{dt}g(t)=$
+	\vspace{1cm}
+	
+	\item What are the maximum and minimum values of  $f(x) =-\frac{1}{3}x^3 + 2x^2 +12x$?
+	\begin{fleqn}\begin{equation*}m = f'(x) = 0\end{equation*} \end{fleqn}
+	\vspace{1cm}
+	\\\\
+	How many roots exist? What are they?
+	\vspace{1.5cm} \\\\
+	What are the values of $f(x)$ at those roots?
+\end{enumerate}
+
+
+\cleardoublepage
+
+
+\end{document}
