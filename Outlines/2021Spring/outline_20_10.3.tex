@@ -1,0 +1,138 @@
+\documentclass[14pt]{extarticle}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{tikz}
+%\usetikzlibrary{calc}
+%\usetikzlibrary{trees}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\graphicspath{ {../../chap10/} }
+\usepackage[top=0.75in, bottom=0.75in, left=0.75in, right=0.75in]{geometry}
+%\newcommand*{\Scale}[2][4]{\scalebox{#1}{\ensuremath{#2}}}%
+\usepackage[shortlabels]{enumitem}
+\usepackage[most]{tcolorbox}
+\definecolor{bg}{RGB}{255,249,227}
+% \usepackage{showframe}
+
+\title{\vspace{-5ex}Math 208 Section 10.3}
+\date{\vspace{-10ex}}
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+\setlength{\parindent}{0pt}
+\usepackage{parskip}
+\setlength{\parskip}{10pt} % 1ex plus 0.5ex minus 0.2ex}
+%\usepackage{ragged2e}
+
+
+\begin{document}
+	\maketitle		
+	\section*{Homework, Reading, and Other}
+	\begin{itemize}
+		\item Section 10.1
+		\item Section 10.2
+		\item Section 10.3
+	\end{itemize}
+
+\section{Goals}
+\begin{itemize}
+	\item Recall and solve derivatives using the Product Rule.
+	\item Recall and solve derivatives using the Quotient Rule.
+	\item Understand what a composite function is.
+\end{itemize}
+
+\section{Section 10.3: Product and Quotient Rules}
+In Chapter 9, we learned how the meaning of the derivative and how to calculate the derivative of some basic functions. Now we learn some additional methods that allow us to find the derivative for a much broader range of functions.
+
+\subsection*{Product Rule}
+
+Say you are given the function $f(x) = (4x^2 -2)(2\sqrt{x}+3)$ and asked to find its derivative. Well, you could multiply it out to get $$8x^{5/2} + 12x^2 - 4x^{1/2} - 6$$
+and then calculate its derivative as $$20x^{3/2}+ 24x - 2x^{-1/2}$$ or ... You could use the Product Rule which states that "The derivative of the product of two functions is \textbf{the first times the derivative of the second, plus the second times the derivative of the first}. 
+
+\begin{tcolorbox}[enhanced jigsaw,colback=bg,boxrule=0pt,arc=0pt]
+	\textbf{Product Rule}
+	\begin{align*}
+		&\text{Given: } & &F(x) \text{ with derivative } F'(x) \\
+		& & &S(x) \text{ with derivative } S'(x) \\
+		&\text{and } & &f(x) = F(x)S(x) \\
+		&\text{then }\\
+		& & &f'(x) = F(x)S'(x) + F'(x)S(x)
+	\end{align*}
+\textbf{The first times the derivative of the second, plus the second times the derivative of the first}
+\end{tcolorbox}
+
+
+Now we let
+$$f(x) = F(x)S(x)$$
+Then
+\begin{align*}
+	F(x) &= (4x^2 -2) & F'(x)&=8x \\\\
+	S(x) &= (2\sqrt{x}+3) & S'(x)&= x^{-1/2}
+\end{align*}
+and
+\begin{align*}
+	f'(x) &= F(x)S'(x) + F'(x)S(x) \\
+	&= (4x^2 -2)(x^{-1/2}) + 8x(2\sqrt{x}+3) \\
+	&= 20x^{3/2} + 24x - 2x^{-1/2}
+\end{align*}
+
+\subsection*{Examples}
+\begin{align*}
+	&\text{(48)} &y &= (x^3 + 2x^2)(3x-1) \\
+	&			&y' &= (x^3 + 2x^2)(3) + (3x^2 + 4x)(3x -1) \\
+	&			&    &= 3x^3 +6x^2 +  9x^3 - 3x^2 + 12x^2 -4x\\
+	&			&    &= 12x^3 + 15x^2 - 4x\\\\
+\end{align*}
+
+
+\subsection*{Quotient Rule}
+Similarly, we have the Quotient Rule to find the derivative of  the quotient of two functions. Call the Top function $T(x)$ and the Bottom function $B(x)$.
+
+\begin{tcolorbox}[enhanced jigsaw,colback=bg,boxrule=0pt,arc=0pt]
+	\textbf{Quotient Rule}
+	\begin{align*}
+		&\text{Given: } & &T(x) \text{ with derivative } T'(x) \\
+		& & &T(x) \text{ with derivative } B'(x) \\
+		&\text{and } & &f(x) = \frac{T(x)}{B(x)} \\
+		&\text{then }\\
+		& & &f'(x) = \frac{T'(x)B(x) - T(x)B'(x)}{(B(x))^2}
+	\end{align*}
+	\textbf{The derivative of the top times the bottom, minus the top times the derivative of the bottom, all divided by the bottom squared.}
+\end{tcolorbox}
+
+
+\subsection*{Examples}
+\begin{align*}
+	&\text{(54)} &\frac{d}{dw} \frac{w^4 - w^3}{3w-1}&= \frac{(4w^3 - 3w^2)(3w-1) - (w^4 - w^3)(3)}{(3w-1)^2} \\
+	&	&		&= \frac{12w^4- 4w^3 - 9w^3 + 3w^2 - 3w^4 + 3w^3}{(3w-1)^2} \\
+	&	&		&=\frac{9w^4- 10w^3 + 3w^2 }{(3w-1)^2} \\
+	&	&		&=\frac{w^2(9w^2- 10w + 3) }{(3w-1)^2} \\
+\end{align*}
+
+
+\section*{Composite function}
+Given 2 functions, $f(u)$ and $g(v)$, there is a composite function, $g(f(x))$. We say "g of f of x".
+\begin{align*}
+	&\text{Let:} & &g(v) = v^3 \text{ and } f(u) = e^u \\
+	&\text{then } & &g(f(x)) = g(e^x) = (e^x)^3 = e^{3x} \tag{1}\\
+	&\text{and } & &f(g(x)) = f(x^3) = e^{x^3}	\tag{2}
+\\\\
+	&\text{Let:} & &g(v) = 3\ln(v) \text{ and } f(x) = e^x \\
+	&\text{then } & &g(f(x)) = g(e^x) = 3\ln(e^x) = 3x \tag{3}\\
+	&\text{and } & &f(g(x)) = f(3\ln x) = e^{3\ln x} = (e^{\ln x})^3 = x^3
+\\\\
+	&\text{Let:} & &h(v) = \sqrt{v} \text{ and } p(x) = x^2 + 4x + 6 \\
+	&\text{then } & &h(p(x)) = h(x^2 + 4x + 6) = \sqrt{x^2 + 4x + 6} \tag{4}\\
+	&\text{and } & &p(h(x)) = p(\sqrt{x}) = \sqrt{x}^2 +4\sqrt{x}+6 = x+4\sqrt{x}+6
+\end{align*}
+
+Often it is easy to determine which is the interior function and which is the exterior function. This is true for the compositions 1, 2, 3, and 4 but not true for the other compositions.
+
+\noindent\rule{\textwidth}{1pt}
+{\footnotesize Copyright (C) 2021 Garold Dalton --- Released under GNU General Public License v3.0}
+
+
+\cleardoublepage
+
+
+
+\end{document}
