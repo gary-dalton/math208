@@ -46,7 +46,7 @@ In Chapter 9, we learned how the meaning of the derivative and how to calculate 
 \subsection*{Product Rule}
 
 Say you are given the function $f(x) = (4x^2 -2)(2\sqrt{x}+3)$ and asked to find its derivative. Well, you could multiply it out to get $$8x^{5/2} + 12x^2 - 4x^{1/2} - 6$$
-and then calculate its derivative as $$20x^{3/2}+ 24x - 2x^{-1/2}$$ or ... You could use the Product Rule which states that "The derivative of the product of two functions is \textbf{the first times the derivative of the second, plus the second times the derivative of the first}. 
+and then calculate its derivative as $$20x^{3/2}+ 24x - 2x^{-1/2}$$ or ... You could use the Product Rule which states: 
 
 \begin{tcolorbox}[enhanced jigsaw,colback=bg,boxrule=0pt,arc=0pt]
 	\textbf{Product Rule}
@@ -57,7 +57,7 @@ and then calculate its derivative as $$20x^{3/2}+ 24x - 2x^{-1/2}$$ or ... You c
 		&\text{then }\\
 		& & &f'(x) = F(x)S'(x) + F'(x)S(x)
 	\end{align*}
-\textbf{The first times the derivative of the second, plus the second times the derivative of the first}
+\textbf{The first times the derivative of the second, plus the derivative of the first times the second.}
 \end{tcolorbox}
 
 
@@ -85,24 +85,24 @@ and
 
 
 \subsection*{Quotient Rule}
-Similarly, we have the Quotient Rule to find the derivative of  the quotient of two functions. Call the Top function $T(x)$ and the Bottom function $B(x)$.
+Similarly, we have the Quotient Rule to find the derivative of the quotient of two functions. Call the Top function $T(x)$ and the Bottom function $B(x)$.
 
 \begin{tcolorbox}[enhanced jigsaw,colback=bg,boxrule=0pt,arc=0pt]
 	\textbf{Quotient Rule}
 	\begin{align*}
 		&\text{Given: } & &T(x) \text{ with derivative } T'(x) \\
-		& & &T(x) \text{ with derivative } B'(x) \\
+		& & &B(x) \text{ with derivative } B'(x) \\
 		&\text{and } & &f(x) = \frac{T(x)}{B(x)} \\
 		&\text{then }\\
-		& & &f'(x) = \frac{T'(x)B(x) - T(x)B'(x)}{(B(x))^2}
+		& & &f'(x) = \frac{B(x)T'(x) - B'(x)T(x)}{(B(x))^2}
 	\end{align*}
-	\textbf{The derivative of the top times the bottom, minus the top times the derivative of the bottom, all divided by the bottom squared.}
+	\textbf{The bottom times the derivative of the top, minus the derivative of the bottom time the top, all divided by the bottom squared.}
 \end{tcolorbox}
 
 
 \subsection*{Examples}
 \begin{align*}
-	&\text{(54)} &\frac{d}{dw} \frac{w^4 - w^3}{3w-1}&= \frac{(4w^3 - 3w^2)(3w-1) - (w^4 - w^3)(3)}{(3w-1)^2} \\
+	&\text{(54)} &\frac{d}{dw} \frac{w^4 - w^3}{3w-1}&= \frac{(3w-1)(4w^3 - 3w^2) - (3)(w^4 - w^3)}{(3w-1)^2} \\
 	&	&		&= \frac{12w^4- 4w^3 - 9w^3 + 3w^2 - 3w^4 + 3w^3}{(3w-1)^2} \\
 	&	&		&=\frac{9w^4- 10w^3 + 3w^2 }{(3w-1)^2} \\
 	&	&		&=\frac{w^2(9w^2- 10w + 3) }{(3w-1)^2} \\
@@ -117,15 +117,15 @@ Given 2 functions, $f(u)$ and $g(v)$, there is a composite function, $g(f(x))$. 
 	&\text{and } & &f(g(x)) = f(x^3) = e^{x^3}	\tag{2}
 \\\\
 	&\text{Let:} & &g(v) = 3\ln(v) \text{ and } f(x) = e^x \\
-	&\text{then } & &g(f(x)) = g(e^x) = 3\ln(e^x) = 3x \tag{3}\\
+	&\text{then } & &g(f(x)) = g(e^x) = 3\ln(e^x) = 3x \\
 	&\text{and } & &f(g(x)) = f(3\ln x) = e^{3\ln x} = (e^{\ln x})^3 = x^3
 \\\\
 	&\text{Let:} & &h(v) = \sqrt{v} \text{ and } p(x) = x^2 + 4x + 6 \\
-	&\text{then } & &h(p(x)) = h(x^2 + 4x + 6) = \sqrt{x^2 + 4x + 6} \tag{4}\\
+	&\text{then } & &h(p(x)) = h(x^2 + 4x + 6) = \sqrt{x^2 + 4x + 6} \tag{3}\\
 	&\text{and } & &p(h(x)) = p(\sqrt{x}) = \sqrt{x}^2 +4\sqrt{x}+6 = x+4\sqrt{x}+6
 \end{align*}
 
-Often it is easy to determine which is the interior function and which is the exterior function. This is true for the compositions 1, 2, 3, and 4 but not true for the other compositions.
+Often it is easy to determine which is the interior function and which is the exterior function. This is true for the compositions 1, 2, and 3 but not true for the other compositions.
 
 \noindent\rule{\textwidth}{1pt}
 {\footnotesize Copyright (C) 2021 Garold Dalton --- Released under GNU General Public License v3.0}

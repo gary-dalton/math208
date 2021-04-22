@@ -1,0 +1,197 @@
+\documentclass[14pt]{extarticle}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{tikz}
+%\usetikzlibrary{calc}
+%\usetikzlibrary{trees}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\graphicspath{ {../../chap10/} }
+\usepackage[top=0.75in, bottom=0.75in, left=0.75in, right=0.75in]{geometry}
+%\newcommand*{\Scale}[2][4]{\scalebox{#1}{\ensuremath{#2}}}%
+\usepackage[shortlabels]{enumitem}
+\usepackage[most]{tcolorbox}
+\definecolor{bg}{RGB}{255,249,227}
+% \usepackage{showframe}
+
+\title{\vspace{-5ex}Math 208 Section 10.4}
+\date{\vspace{-10ex}}
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+\setlength{\parindent}{0pt}
+\usepackage{parskip}
+\setlength{\parskip}{10pt} % 1ex plus 0.5ex minus 0.2ex}
+%\usepackage{ragged2e}
+
+
+\begin{document}
+	\maketitle
+		
+\section{Homework, Reading, and Other}
+\begin{itemize}
+	\item Section 10.3
+	\item Section 10.4
+\end{itemize}
+
+\section{Goals}
+\begin{itemize}
+	\item Understand and determine composite functions.
+	\item Recall and solve derivatives using the Chain Rule.
+\end{itemize}
+
+\section{Section 10.4: Chain Rule}
+\subsection{Composite function}
+Given 2 functions, $f(u)$ and $g(v)$, there is a composite function, $g(f(x))$. We say "g of f of x".
+\begin{align*}
+	&\text{Let:} & &g(v) = v^3 \text{ and } f(u) = e^u \\
+	&\text{then } & &g(f(x)) = g(e^x) = (e^x)^3 = e^{3x} \tag{1}\\
+	&\text{and } & &f(g(x)) = f(x^3) = e^{x^3}	\tag{2}
+	\\\\
+	&\text{Let:} & &g(v) = 3\ln(v) \text{ and } f(x) = e^x \\
+	&\text{then } & &g(f(x)) = g(e^x) = 3\ln(e^x) = 3x \\
+	&\text{and } & &f(g(x)) = f(3\ln x) = e^{3\ln x} = (e^{\ln x})^3 = x^3
+	\\\\
+	&\text{Let:} & &h(v) = \sqrt{v} \text{ and } p(x) = x^2 + 4x + 6 \\
+	&\text{then } & &h(p(x)) = h(x^2 + 4x + 6) = \sqrt{x^2 + 4x + 6} \tag{3}\\
+	&\text{and } & &p(h(x)) = p(\sqrt{x}) = \sqrt{x}^2 +4\sqrt{x}+6 = x+4\sqrt{x}+6
+\end{align*}
+
+
+\subsection{Chain Rule}
+We denote the Exterior function as $E(u)$ and the Interior function as $I(x)$.
+
+\begin{tcolorbox}[enhanced jigsaw,colback=bg,boxrule=0pt,arc=0pt]
+	\textbf{Chain Rule}
+	\begin{align*}
+		&\text{Given: } & &f(x)= E(I(x)) \text{ is a composite function } \\
+		&\text{then }\\
+		& & &f'(x) = E'(u) * I'(x) \\\\
+		&\text{Where }& & u=I(x)
+	\end{align*}
+	The chain may go on for multiple levels if needed.
+\end{tcolorbox}
+
+\begin{multicols}{2}
+	\begin{align*}
+		&\text{(18)} &f(x) &= (9-5x)^2 \\\\
+		&			&f'(x) &= E'(u)*I'(x) \\
+		&			&f'(x) &= 2(9-5x)*(-5) \\
+		&			&    &=-10(9-5x) \\
+		&			&    &= 50x - 90
+	\end{align*}
+	\vfill\null
+	\columnbreak
+	\begin{align*}
+		&E(u) = u^2 \\
+		&E'(u) = 2u \\\\
+		&u = I(x)=9-5x \\
+		& I'(x) = -5
+	\end{align*}
+\vfill\null
+\end{multicols}
+
+This result leads to the General Power Rule which is just a specific shortcut using the chain rule.
+
+\begin{tcolorbox}[enhanced jigsaw,colback=bg,boxrule=0pt,arc=0pt]
+	\textbf{General Power Rule} \\
+	If $u=I(x)$ is a differentiable function and $n$ is any real number, with $$y=f(x) = u^n$$ then $$y'=n u^{n-1} u'$$
+\end{tcolorbox}
+Redoing the previous result using this shortcut, we have
+\begin{align*}
+	f(x) &= (9-5x)^2 = u^2  && \text{ where } u=9-5x \\
+	f'(x) &= 2(9-5x)(-5) \\
+	 &= 50x-90 
+\end{align*}
+
+\subsubsection{Examples}
+\begin{multicols}{2}
+	\begin{align*}
+		&\text{(32)} &f(x) &= 2 \ln(x^2 - 3x + 4) \\\\
+		&			&f'(x) &= E'(u)*I'(x) \\
+		&			&f'(x)	&= \frac{2}{x^2-3x+4}*(2x-3) \\
+		&	&		&= \frac{4x-6}{x^2-3x+4}
+	\end{align*}
+	\vfill\null
+	\columnbreak
+	\begin{align*}
+		&E(u) = 2\ln u \\
+		&E'(u) = 2/u \\\\
+		&u = I(x)=x^2 - 3x + 4 \\
+		& I'(x) = 2x-3
+	\end{align*}
+	\vfill\null
+\end{multicols}
+
+\begin{multicols}{2}[This uses the Product and Chain Rules]
+	\begin{align*}
+		&\text{(50)} &f(x) &= x \ln(1+e^x) \\\\
+		&			&f'(x) &= FS'+ F'S \\\\
+		&			&S'(x) &= E'(u)I'(x) \\
+		&			&S'(x) &= \frac{1}{1+e^x}e^x \\\\		
+		&			&f'(x) &= x\frac{1}{1+e^x}e^x +  (1)\ln(1+e^x)\\
+		&			&    &= \frac{xe^x}{1+e^x} + \ln(1+e^x)
+	\end{align*}
+	\vfill\null
+	\columnbreak
+	\begin{align*}
+		&F(x) = x \\
+		&F'(x) = 1 \\
+		&S(x) = \ln(1+e^x) \\
+		&S'(x) \text{ use Chain rule} \\\\
+		&E(u) = \ln u \\
+		&E'(u) = 1/u \\\\
+		&u = I(x)= 1+e^x \\
+		& I'(x) = e^x
+	\end{align*}
+	\vfill\null
+\end{multicols}
+
+
+Find the value where the tangent line is horizontal. (Use the General Power Rule)
+\begin{align*}
+	&\text{(68)} &f(x) &= (x^2 +4x+5)^{1/2} \\
+	&			&f'(x)	&= \frac{1}{2}(x^2 +4x+5)^{-1/2}*(2x +4) \\
+	&	&		&= \frac{2x +4}{2 \sqrt{x^2 +4x+5}} \\
+	&	&		f'(x)&=0 \text{ when } x=-2
+\end{align*} 
+
+
+\subsection{Chain Rule Shortcuts}
+We already have the General Power Rule which is a shortcut using the chain rule. Additionaly, we have one for $\ln$ and $e^x$.
+
+\begin{tcolorbox}[enhanced jigsaw,colback=bg,boxrule=0pt,arc=0pt]
+	\textbf{Shortcuts}
+	\begin{align*}
+		&\text{Given: } & &f(x) \text{ is a differentiable function} \\
+		&\text{we have }\\
+		& & &\frac{d}{dx}\ln(f(x)) = \frac{1}{f(x)}f'(x) \\\\
+		& & &\frac{d}{dx}e^{f(x)} = e^{f(x)}f'(x)
+	\end{align*}
+\end{tcolorbox}
+
+\subsubsection{Examples}
+Let
+\begin{align*}
+	f(x) &= \ln(x^2 - 3x + 4) \\\\
+	f'(x)	&= \frac{1}{x^2-3x+4}*(2x-3) \\
+			&= \frac{2x-3}{x^2-3x+4}
+\end{align*}
+and let
+\begin{align*}
+	f(x) &= e^{2x^2} \\\\
+	f'(x)	&= e^{2x^2}(4x) \\
+	&= 4xe^{2x^2}
+\end{align*}
+
+
+
+
+\noindent\rule{\textwidth}{1pt}
+{\footnotesize Copyright (C) 2021 Garold Dalton --- Released under GNU General Public License v3.0}
+
+
+\cleardoublepage
+
+
+
+\end{document}
