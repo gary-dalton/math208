@@ -45,8 +45,8 @@ In Chapter 9, we learned how the meaning of the derivative and how to calculate 
 
 \subsection*{Product Rule}
 
-Say you are given the function $f(x) = (4x^2 -2)(2\sqrt{x}+3)$ and asked to find its derivative. Well, you could multiply it out to get $$8x^{5/2} + 12x^2 - 4x^{1/2} - 6$$
-and then calculate its derivative as $$20x^{3/2}+ 24x - 2x^{-1/2}$$ or ... You could use the Product Rule which states: 
+Say you are given the function $f(x) = (4x^2 -2)(2x+3)$ and asked to find its derivative. Well, you could multiply it out to get $$8x^{3} + 12x^2 - 4x - 6$$
+and then calculate its derivative as $$24x^{2}+ 24x - 4$$ or ... You could use the Product Rule which states: 
 
 \begin{tcolorbox}[enhanced jigsaw,colback=bg,boxrule=0pt,arc=0pt]
 	\textbf{Product Rule}
@@ -66,13 +66,14 @@ $$f(x) = F(x)S(x)$$
 Then
 \begin{align*}
 	F(x) &= (4x^2 -2) & F'(x)&=8x \\\\
-	S(x) &= (2\sqrt{x}+3) & S'(x)&= x^{-1/2}
+	S(x) &= (2x+3) & S'(x)&= 2
 \end{align*}
 and
 \begin{align*}
 	f'(x) &= F(x)S'(x) + F'(x)S(x) \\
-	&= (4x^2 -2)(x^{-1/2}) + 8x(2\sqrt{x}+3) \\
-	&= 20x^{3/2} + 24x - 2x^{-1/2}
+	&= (4x^2 -2)(2) + 8x(2x+3) \\
+	&= 8x^2-4 + 16x^2 +24x \\
+	&= 24x^2 + 24x-4
 \end{align*}
 
 \subsection*{Examples}
@@ -101,13 +102,50 @@ Similarly, we have the Quotient Rule to find the derivative of the quotient of t
 
 
 \subsection*{Examples}
-\begin{align*}
-	&\text{(54)} &\frac{d}{dw} \frac{w^4 - w^3}{3w-1}&= \frac{(3w-1)(4w^3 - 3w^2) - (3)(w^4 - w^3)}{(3w-1)^2} \\
-	&	&		&= \frac{12w^4- 4w^3 - 9w^3 + 3w^2 - 3w^4 + 3w^3}{(3w-1)^2} \\
-	&	&		&=\frac{9w^4- 10w^3 + 3w^2 }{(3w-1)^2} \\
-	&	&		&=\frac{w^2(9w^2- 10w + 3) }{(3w-1)^2} \\
-\end{align*}
+\begin{multicols}{2}
+	\begin{align*}
+		f(x) &= \frac{2+x^3}{x^3} \\\\
+		f'(x) &= \frac{BT' + B'T}{B^2} \\
+		&= \frac{x^3(3x^2)-3x^3(2+x^3)}{(x^3)^2} \\
+		&= \left(\frac{3x^2}{x^2}\right) \frac{x^3-2-x^3}{x^4} \\
+		&= \frac{-6}{x^4}
+	\end{align*}
+	\vfill\null
+	\columnbreak
+	\begin{align*}
+		&T(x) = 2+x^3 \\
+		&T'(x) = 3x^2 \\\\
+		&B(x)= x^3 \\
+		&B'(x) = 3x^2
+	\end{align*}
+	\vfill\null
+\end{multicols}
+This may also be done using the methods of Chapter 9 by separating the fraction. In this chapter please use the product and quotient rules.
 
+\begin{align*}
+	f(x) &= \frac{2+x^3}{x^3} = \frac{2}{x^3}+ \frac{x^3}{x^3} = 2x^{-3} +1 \\\\
+	f'(x) &= -6x^{-4}
+\end{align*}
+This is problem 54 and it cannot be done using methods from Chapter 9.
+\begin{multicols}{2}
+	\begin{align*}
+		f(w) &= \frac{w^4 - w^3}{3w-1} \\\\
+		f'(w) &= \frac{BT' + B'T}{B^2} \\ \\
+		&= \frac{(3w-1)(4w^3 - 3w^2) - (3)(w^4 - w^3)}{(3w-1)^2} \\
+		&= \frac{12w^4- 4w^3 - 9w^3 + 3w^2 - 3w^4 + 3w^3}{(3w-1)^2} \\
+		&=\frac{9w^4- 10w^3 + 3w^2 }{(3w-1)^2} \\
+		&=\frac{w^2(9w^2- 10w + 3) }{(3w-1)^2}
+	\end{align*}
+	\vfill\null
+	\columnbreak
+	\begin{align*}
+		&T(w) = w^4 - w^3 \\
+		&T'(w) = 4w^3-3w^2 \\\\
+		&B(w)= 3w-1 \\
+		&B'(w) = 3
+	\end{align*}
+	\vfill\null
+\end{multicols}
 
 \section*{Composite function}
 Given 2 functions, $f(u)$ and $g(v)$, there is a composite function, $g(f(x))$. We say "g of f of x".
